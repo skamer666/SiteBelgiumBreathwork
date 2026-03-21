@@ -141,13 +141,16 @@ export default function Services({ calendlyUrl }) {
                 </p>
 
                 {/* Price */}
-                <div className="mb-6">
+                <div className="mb-4">
                   {s.price ? (
                     <div className="flex items-baseline gap-1">
                       <span className={`font-montserrat font-black text-5xl
                         ${s.highlight ? 'text-white' : 'text-navy-700'}`}>{s.price}</span>
                       <span className={`text-xl font-medium
                         ${s.highlight ? 'text-white/70' : 'text-navy-400'}`}>{s.unit}</span>
+                      <span className={`text-xs ml-1 ${s.highlight ? 'text-white/45' : 'text-navy-300'}`}>
+                        · sur place
+                      </span>
                     </div>
                   ) : (
                     <span className={`font-montserrat font-bold text-2xl
@@ -156,6 +159,29 @@ export default function Services({ calendlyUrl }) {
                     </span>
                   )}
                 </div>
+
+                {/* Loyalty badge – groupe only */}
+                {s.highlight && (
+                  <div className="mb-6 rounded-xl bg-white/10 border border-white/20 px-4 py-3">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-yellow-300 text-sm" aria-hidden="true">★</span>
+                      <span className="text-white font-montserrat font-semibold text-xs tracking-wide uppercase">
+                        Règle de fidélité
+                      </span>
+                    </div>
+                    <p className="text-white/80 text-xs leading-relaxed italic mb-2">
+                      "La transformation est un voyage. Pour te soutenir dans ta démarche,
+                      ta 4ème séance est offerte."
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-white/55 text-xs">4 séances = 3 × 50€</span>
+                      <span className="bg-white/15 text-white font-montserrat font-bold
+                                       text-xs px-2.5 py-1 rounded-full">
+                        → 37,50€ / séance
+                      </span>
+                    </div>
+                  </div>
+                )}
 
                 {/* Description */}
                 <p className={`text-sm leading-relaxed mb-6
