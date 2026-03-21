@@ -25,6 +25,13 @@ export default function Hero({ calendlyUrl }) {
                  overflow-hidden bg-hero-bg px-4 md:px-8 pt-24 pb-16"
       aria-label="Section principale"
     >
+      {/* Background photo */}
+      <div aria-hidden="true" className="absolute inset-0">
+        <img src="/images/seance-01.jpg" alt=""
+             className="w-full h-full object-cover opacity-20" loading="eager" />
+        <div className="absolute inset-0 bg-hero-bg opacity-85" />
+      </div>
+
       {/* Aurora animated orbs */}
       <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="breathe-orb absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full

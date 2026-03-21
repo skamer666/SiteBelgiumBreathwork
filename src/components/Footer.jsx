@@ -29,18 +29,8 @@ export default function Footer({ calendlyUrl }) {
 
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-full bg-sage-600 flex items-center justify-center">
-                <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 text-white" aria-hidden="true">
-                  <path d="M12 3C12 3 6 7 6 12.5C6 15.5 8.7 18 12 18C15.3 18 18 15.5 18 12.5C18 7 12 3 12 3Z"
-                        fill="currentColor" opacity="0.9"/>
-                  <path d="M12 8C12 8 9 10.5 9 13C9 14.7 10.3 16 12 16C13.7 16 15 14.7 15 13C15 10.5 12 8 12 8Z"
-                        fill="white" opacity="0.6"/>
-                </svg>
-              </div>
-              <span className="font-montserrat font-bold text-white text-sm tracking-wide">
-                Belgium Breathwork
-              </span>
+            <div className="mb-4">
+              <img src="/images/logo.png" alt="Belgium Breathwork" className="h-10 w-auto object-contain" />
             </div>
             <p className="text-sm leading-relaxed max-w-xs mb-6">
               Séances d'Hypnotic Breathwork en Belgique pour libérer tes émotions et retrouver l'équilibre.

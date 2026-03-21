@@ -40,20 +40,8 @@ export default function About({ calendlyUrl }) {
               <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden
                               border-4 border-sage-600/40 shadow-glow-sage">
                 {/* Gradient placeholder for photo */}
-                <div className="absolute inset-0 bg-gradient-to-br from-sage-700 via-navy-500 to-sage-900
-                                flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-20 h-20 rounded-full bg-white/10 mx-auto mb-3 flex items-center justify-center">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"
-                           className="w-12 h-12 text-white/50" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round"
-                              d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                      </svg>
-                    </div>
-                    <p className="text-white/60 text-sm font-medium">Daphnée</p>
-                    <p className="text-sage-400 text-xs">Belgium Breathwork</p>
-                  </div>
-                </div>
+                <img src="/images/daphnee.png" alt="Daphnée, fondatrice de Belgium Breathwork"
+                   className="absolute inset-0 w-full h-full object-cover object-top" />
               </div>
               {/* Badge */}
               <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 glass rounded-full
