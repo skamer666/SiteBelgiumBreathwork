@@ -1,80 +1,64 @@
 /**
  * Vercel Serverless Function — /api/prochaines-seances
- * Retourne les prochaines séances de groupe + places restantes
+ * Utilise event_type_available_times (max 7j par requête)
+ * Enchaîne 4 semaines pour couvrir 28 jours de disponibilités
  */
 
-const TOKEN         = process.env.CALENDLY_TOKEN
-const EVENT_UUID    = process.env.CALENDLY_EVENT_TYPE_UUID
-const USER_URI      = process.env.CALENDLY_USER_URI
-const MAX_PLACES    = parseInt(process.env.CALENDLY_MAX_PLACES || '10')
-const HEADERS       = {
-  Authorization: `Bearer ${TOKEN}`,
-  'Content-Type': 'application/json',
-}
+const TOKEN      = process.env.CALENDLY_TOKEN
+const EVENT_URI  = `https://api.calendly.com/event_types/${process.env.CALENDLY_EVENT_TYPE_UUID}`
+const HEADERS    = { Authorization: `Bearer ${TOKEN}` }
+const MAX_SLOTS  = 5   // nombre de créneaux à afficher sur le site
 
-async function fetchJSON(url) {
+async function fetchWeek(start, end) {
+  const url =
+    `https://api.calendly.com/event_type_available_times` +
+    `?event_type=${encodeURIComponent(EVENT_URI)}` +
+    `&start_time=${start}` +
+    `&end_time=${end}`
+
   const res = await fetch(url, { headers: HEADERS })
-  if (!res.ok) throw new Error(`Calendly API error: ${res.status}`)
-  return res.json()
+  if (!res.ok) return []
+  const data = await res.json()
+  return data.collection || []
 }
 
 export default async function handler(req, res) {
-  // CORS
   res.setHeader('Access-Control-Allow-Origin', '*')
-  res.setHeader('Cache-Control', 's-maxage=300, stale-while-revalidate=60') // cache 5min
+  res.setHeader('Cache-Control', 's-maxage=180, stale-while-revalidate=60')
 
   try {
-    const now = new Date().toISOString()
+    const now    = new Date()
+    // Démarre 2 minutes dans le futur (exigence Calendly)
+    now.setMinutes(now.getMinutes() + 2)
 
-    // 1. Récupère les prochains événements planifiés (actifs, dans le futur)
-    const eventsData = await fetchJSON(
-      `https://api.calendly.com/scheduled_events` +
-      `?user=${encodeURIComponent(USER_URI)}` +
-      `&event_type=https://api.calendly.com/event_types/${EVENT_UUID}` +
-      `&status=active` +
-      `&min_start_time=${now}` +
-      `&sort=start_time:asc` +
-      `&count=5`
-    )
+    // Enchaîne 4 fenêtres de 7 jours = 28 jours de dispo
+    const allSlots = []
+    for (let week = 0; week < 4; week++) {
+      const start = new Date(now.getTime() + week * 7 * 24 * 60 * 60 * 1000)
+      const end   = new Date(start.getTime() + 7 * 24 * 60 * 60 * 1000)
 
-    const events = eventsData.collection || []
+      const slots = await fetchWeek(
+        start.toISOString().replace('.000', ''),
+        end.toISOString().replace('.000', '')
+      )
+      allSlots.push(...slots)
+      if (allSlots.length >= MAX_SLOTS) break
+    }
 
-    // 2. Pour chaque événement, compte les inscrits
-    const seances = await Promise.all(
-      events.map(async (event) => {
-        const eventUUID = event.uri.split('/').pop()
-
-        let inviteesCount = 0
-        try {
-          const invData = await fetchJSON(
-            `https://api.calendly.com/scheduled_events/${eventUUID}/invitees?status=active&count=100`
-          )
-          inviteesCount = invData.pagination?.count ?? invData.collection?.length ?? 0
-        } catch {
-          // Si erreur invitees, on continue avec 0
-        }
-
-        const placesRestantes = Math.max(0, MAX_PLACES - inviteesCount)
-
-        return {
-          uuid:            eventUUID,
-          nom:             event.name,
-          dateDebut:       event.start_time,
-          dateFin:         event.end_time,
-          placesRestantes,
-          placesTotal:     MAX_PLACES,
-          complet:         placesRestantes === 0,
-          lieu:            'Avenue Floréal 20, Waterloo',
-          prix:            50,
-          urlReservation:  `https://calendly.com/belgiumbreathwork/belgium-breathwork`,
-        }
-      })
-    )
+    // Prend les N premiers créneaux disponibles
+    const seances = allSlots.slice(0, MAX_SLOTS).map(slot => ({
+      dateDebut:       slot.start_time,
+      placesRestantes: slot.invitees_remaining,
+      complet:         slot.invitees_remaining === 0,
+      urlReservation:  slot.scheduling_url,
+      lieu:            'Avenue Floréal 20, Waterloo',
+      prix:            50,
+    }))
 
     return res.status(200).json({ seances })
 
   } catch (err) {
-    console.error('Calendly API error:', err.message)
-    return res.status(500).json({ error: 'Impossible de récupérer les séances', seances: [] })
+    console.error('Calendly error:', err.message)
+    return res.status(500).json({ error: err.message, seances: [] })
   }
 }

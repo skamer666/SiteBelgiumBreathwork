@@ -11,7 +11,7 @@ function formatDate(isoString) {
   }
 }
 
-function PlacesBar({ restantes, total }) {
+function PlacesBar({ restantes, total = 6 }) {
   const pct = Math.round((restantes / total) * 100)
   const couleur = restantes <= 2 ? 'bg-red-400' : restantes <= 4 ? 'bg-amber-400' : 'bg-sage-400'
 
@@ -155,7 +155,7 @@ export default function ProchainSeances({ calendlyUrl }) {
                   </div>
 
                   {/* Jauge places */}
-                  <PlacesBar restantes={s.placesRestantes} total={s.placesTotal} />
+                  <PlacesBar restantes={s.placesRestantes} />
 
                   {/* CTA */}
                   {s.complet ? (
@@ -166,17 +166,20 @@ export default function ProchainSeances({ calendlyUrl }) {
                     </button>
                   ) : (
                     <div>
-                      <button
-                        onClick={handleCalendly}
+                      <a
+                        href={s.urlReservation}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="btn-primary w-full justify-center text-sm"
                         aria-label={`Réserver la séance du ${date} à ${heure}`}
                       >
                         Bloquer ma place — 0€ aujourd'hui
-                      </button>
+                      </a>
                       <p className="text-white/30 text-xs text-center mt-2 italic">
                         Aucune CB requise · Payconiq ou espèces sur place
                       </p>
                     </div>
+
                   )}
                 </motion.div>
               )
