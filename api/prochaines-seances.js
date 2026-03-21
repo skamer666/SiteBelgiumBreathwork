@@ -4,7 +4,7 @@
  * Enchaîne 4 semaines pour couvrir 28 jours de disponibilités
  */
 
-const TOKEN      = process.env.CALENDLY_TOKEN
+const TOKEN      = (process.env.CALENDLY_TOKEN || '').replace(/\s/g, '')
 const EVENT_URI  = `https://api.calendly.com/event_types/${process.env.CALENDLY_EVENT_TYPE_UUID}`
 const HEADERS    = { Authorization: `Bearer ${TOKEN}` }
 const MAX_SLOTS  = 5   // nombre de créneaux à afficher sur le site
