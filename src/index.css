@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FAFAF7;
+    color: #1B2D4F;
+    overflow-x: hidden;
+  }
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  /* Glassmorphism */
+  .glass {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .glass-light {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(124, 154, 126, 0.2);
+  }
+
+  /* Text gradient */
+  .text-gradient {
+    background: linear-gradient(135deg, #A8C5A0, #7C9A7E, #5578B1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #E8D5B7, #D4B896, #C09B75);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-sage-600 hover:bg-sage-700
+           text-white font-semibold font-montserrat px-7 py-4 rounded-full
+           transition-all duration-300 shadow-glow-sage hover:shadow-lift
+           hover:-translate-y-0.5 active:translate-y-0 active:scale-95
+           focus:outline-none focus:ring-2 focus:ring-sage-400 focus:ring-offset-2;
+    min-height: 56px;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 border-2 border-white/40
+           text-white hover:border-white hover:bg-white/10 font-semibold font-montserrat
+           px-7 py-4 rounded-full transition-all duration-300
+           focus:outline-none focus:ring-2 focus:ring-white/50;
+    min-height: 56px;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 text-sage-400 hover:text-sage-300
+           font-medium underline underline-offset-4 transition-colors duration-200;
+  }
+
+  /* Typography */
+  .heading-xl {
+    @apply font-montserrat font-black text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight;
+  }
+  .heading-lg {
+    @apply font-montserrat font-bold text-3xl md:text-4xl leading-tight;
+  }
+  .heading-md {
+    @apply font-montserrat font-bold text-2xl md:text-3xl leading-tight;
+  }
+  .body-lg {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+  .body-md {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+
+  /* Section layout */
+  .section-pad {
+    @apply py-20 md:py-28 px-4 md:px-8;
+  }
+  .container-max {
+    @apply max-w-6xl mx-auto;
+  }
+  .section-tag {
+    @apply inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase
+           px-4 py-2 rounded-full border;
+  }
+}
+
+/* Breathing orb animation */
+@keyframes breathe-orb {
+  0%, 100% { transform: scale(1) rotate(0deg);   opacity: 0.25; }
+  33%       { transform: scale(1.15) rotate(60deg);  opacity: 0.45; }
+  66%       { transform: scale(0.92) rotate(120deg); opacity: 0.3;  }
+}
+.breathe-orb { animation: breathe-orb 8s ease-in-out infinite; }
+
+@keyframes breathe-orb-2 {
+  0%, 100% { transform: scale(1) rotate(0deg);    opacity: 0.2; }
+  40%       { transform: scale(1.2) rotate(-80deg); opacity: 0.4; }
+  80%       { transform: scale(0.9) rotate(-160deg);opacity: 0.25;}
+}
+.breathe-orb-2 { animation: breathe-orb-2 11s ease-in-out infinite; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-track { background: #1B2D4F; }
+::-webkit-scrollbar-thumb { background: #4A7C59; border-radius: 3px; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,143 @@
+import { motion } from 'framer-motion'
+
+const navLinks = [
+  { label: 'À propos',      href: '#about'       },
+  { label: 'Séances',       href: '#services'    },
+  { label: 'Témoignages',   href: '#temoignages' },
+  { label: 'FAQ',           href: '#faq'         },
+]
+
+const legalLinks = [
+  { label: 'Mentions légales', href: '#' },
+  { label: 'Politique de confidentialité', href: '#' },
+]
+
+export default function Footer({ calendlyUrl }) {
+  const handleCalendly = (e) => {
+    e.preventDefault()
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({ url: calendlyUrl })
+    } else {
+      window.open(calendlyUrl, '_blank')
+    }
+  }
+
+  return (
+    <footer className="bg-navy-900 text-white/60" role="contentinfo">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+
+          {/* Brand */}
+          <div className="md:col-span-2">
+            <div className="flex items-center gap-2.5 mb-4">
+              <div className="w-8 h-8 rounded-full bg-sage-600 flex items-center justify-center">
+                <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 text-white" aria-hidden="true">
+                  <path d="M12 3C12 3 6 7 6 12.5C6 15.5 8.7 18 12 18C15.3 18 18 15.5 18 12.5C18 7 12 3 12 3Z"
+                        fill="currentColor" opacity="0.9"/>
+                  <path d="M12 8C12 8 9 10.5 9 13C9 14.7 10.3 16 12 16C13.7 16 15 14.7 15 13C15 10.5 12 8 12 8Z"
+                        fill="white" opacity="0.6"/>
+                </svg>
+              </div>
+              <span className="font-montserrat font-bold text-white text-sm tracking-wide">
+                Belgium Breathwork
+              </span>
+            </div>
+            <p className="text-sm leading-relaxed max-w-xs mb-6">
+              Séances d'Hypnotic Breathwork en Belgique pour libérer tes émotions et retrouver l'équilibre.
+              Certifiée IPHM, formée à Bali.
+            </p>
+            {/* Social */}
+            <div className="flex gap-3">
+              <a href="https://instagram.com/belgium.breathwork"
+                 target="_blank" rel="noopener noreferrer"
+                 className="w-9 h-9 rounded-full bg-white/10 hover:bg-sage-600 flex items-center justify-center
+                            transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sage-400"
+                 aria-label="Belgium Breathwork sur Instagram">
+                <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Navigation */}
+          <div>
+            <h3 className="font-montserrat font-semibold text-white text-sm mb-4 tracking-wide uppercase">
+              Navigation
+            </h3>
+            <ul className="space-y-2.5" role="list">
+              {navLinks.map((l) => (
+                <li key={l.href}>
+                  <a href={l.href}
+                     className="text-sm hover:text-sage-400 transition-colors duration-200">
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <button onClick={handleCalendly}
+                        className="text-sm text-sage-400 hover:text-sage-300 transition-colors duration-200">
+                  Réserver →
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="font-montserrat font-semibold text-white text-sm mb-4 tracking-wide uppercase">
+              Contact
+            </h3>
+            <ul className="space-y-3" role="list">
+              <li>
+                <a href="tel:+32494204093"
+                   className="flex items-center gap-2 text-sm hover:text-sage-400 transition-colors duration-200">
+                  <svg className="w-4 h-4 text-sage-600 shrink-0" fill="none" viewBox="0 0 24 24"
+                       stroke="currentColor" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  +32 494 20 40 93
+                </a>
+              </li>
+              <li>
+                <a href="mailto:Belgiumbreathwork@gmail.com"
+                   className="flex items-center gap-2 text-sm hover:text-sage-400 transition-colors duration-200">
+                  <svg className="w-4 h-4 text-sage-600 shrink-0" fill="none" viewBox="0 0 24 24"
+                       stroke="currentColor" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Belgiumbreathwork@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/belgium.breathwork" target="_blank" rel="noopener noreferrer"
+                   className="flex items-center gap-2 text-sm hover:text-sage-400 transition-colors duration-200">
+                  <svg className="w-4 h-4 text-sage-600 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                  @belgium.breathwork
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center
+                        justify-between gap-4 text-xs text-white/30">
+          <p>© 2026 Belgium Breathwork. Tous droits réservés. · BCE : 1020.674.283</p>
+          <div className="flex gap-4">
+            {legalLinks.map((l) => (
+              <a key={l.label} href={l.href}
+                 className="hover:text-white/60 transition-colors duration-200">
+                {l.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
