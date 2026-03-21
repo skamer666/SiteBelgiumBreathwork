@@ -35,7 +35,7 @@
           }
           if (data && data.event === 'calendly.event_scheduled') {
             if (typeof fbq === 'function') {
-              fbq('track', 'Lead');
+              fbq('track', 'Schedule');
             }
           }
         } catch(err) {}
