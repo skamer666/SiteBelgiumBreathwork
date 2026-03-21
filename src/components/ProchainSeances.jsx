@@ -75,8 +75,22 @@ export default function ProchainSeances({ calendlyUrl }) {
     }
   }
 
-  // Si erreur API, on affiche rien (section invisible)
-  if (!loading && (erreur || seances.length === 0)) return null
+  // Affiche l'erreur pour debug
+  if (!loading && erreur) return (
+    <section className="bg-navy-700 py-10 text-center">
+      <p className="text-red-400 text-sm font-mono">
+        ⚠ Erreur API — vérifie les variables d'environnement Vercel
+      </p>
+    </section>
+  )
+
+  if (!loading && seances.length === 0) return (
+    <section className="bg-navy-700 py-10 text-center">
+      <p className="text-white/40 text-sm">
+        Aucune séance disponible dans les 28 prochains jours
+      </p>
+    </section>
+  )
 
   return (
     <section id="prochaines-seances" ref={ref} aria-labelledby="seances-title"
