@@ -42,14 +42,14 @@ export default function MobileCTA({ calendlyUrl }) {
               <p className="text-white font-montserrat font-semibold text-sm leading-tight">
                 Séance Hypnotic Breathwork
               </p>
-              <p className="text-sage-400 text-xs font-medium">À partir de 50 € · Disponible en ligne</p>
+              <p className="text-sage-400 text-xs font-medium">50€ groupe · Paiement sur place à Waterloo</p>
             </div>
             <button
               onClick={handleCalendly}
               className="btn-primary text-sm px-5 py-3 shrink-0"
-              aria-label="Réserver ma séance à 50 euros"
+              aria-label="Bloquer mon créneau — paiement sur place"
             >
-              Réserver (50€)
+              Bloquer (0€)
             </button>
           </div>
         </motion.div>

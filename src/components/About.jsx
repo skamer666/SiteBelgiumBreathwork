@@ -3,7 +3,7 @@ import { useInView } from '../hooks/useInView'
 
 const credentials = [
   { label: 'Certifiée IPHM', sub: 'International Practitioners of Holistic Medicine' },
-  { label: 'Siamlee Transformation', sub: 'Formation Hypnotic Breathwork certifiée IPHM' },
+  { label: 'Formation certifiée', sub: 'Hypnotic Breathwork – reconnue par IPHM' },
   { label: 'Accompagnement holistique', sub: 'Corps · Mental · Inconscient' },
 ]
 
@@ -89,7 +89,7 @@ export default function About({ calendlyUrl }) {
               </p>
               <p>
                 Ce chemin m'a conduite à me former en <strong className="text-sage-300 font-medium">Hypnotic Breathwork</strong>{' '}
-                auprès de <strong className="text-white/90 font-medium">Siamlee Transformation</strong>,
+                dans une formation certifiée,
                 une formation certifiée et reconnue par <strong className="text-white/90 font-medium">IPHM</strong>.
               </p>
               <p>
@@ -123,7 +123,7 @@ export default function About({ calendlyUrl }) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                       d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              Réserver avec Daphnée (50€)
+              Réserver avec Daphnée (150€)
             </button>
           </motion.div>
         </div>

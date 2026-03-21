@@ -21,11 +21,11 @@ const faqs = [
   },
   {
     q: 'Où se trouvent les séances ? Y a-t-il du parking ou une gare proche ?',
-    a: 'Les séances individuelles se déroulent dans un espace calme et intimiste en Belgique, facilement accessible. Parking disponible à proximité et accessible en transport en commun. Les séances en ligne sont également possibles pour les individuelles. L\'adresse exacte est communiquée lors de la confirmation de réservation.',
+    a: 'Les séances se déroulent à Waterloo, dans un espace calme et intimiste, facilement accessible. Parking disponible à proximité et accès en transport en commun. Les séances en ligne sont également possibles pour les individuelles. L\'adresse exacte est communiquée lors de la confirmation de réservation.',
   },
   {
     q: 'Comment payer et comment réserver ?',
-    a: 'La réservation se fait directement en ligne via Calendly — c\'est rapide, simple, sans friction. Le paiement peut se faire en ligne ou sur place selon les préférences. Pour les séances entreprise, contacte Daphnée directement par email ou téléphone pour un devis personnalisé.',
+    a: 'La réservation se fait directement en ligne via Calendly — rapide, simple, sans carte bancaire requise. Tu ne paies rien en avance. Le règlement se fait directement après ta séance à Waterloo, en espèces ou via Payconiq. Pour les séances entreprise, contacte Daphnée par email ou téléphone.',
   },
 ]
 

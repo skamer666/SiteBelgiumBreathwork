@@ -88,24 +88,29 @@ export default function Hero({ calendlyUrl }) {
         {/* Price signal */}
         <motion.p variants={fadeUp}
                   className="text-sand-200/90 font-montserrat font-semibold text-lg mb-8">
-          Séance individuelle à partir de{' '}
+          Séance de groupe —{' '}
           <span className="text-white bg-sage-600/40 px-3 py-1 rounded-full">50 €</span>
+          <span className="text-white/50 font-normal text-base ml-2">· Payable sur place</span>
         </motion.p>
 
         {/* CTA buttons */}
         <motion.div variants={fadeUp}
-                    className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
+                    className="flex flex-col items-center gap-3 mb-10">
           <button onClick={handleCalendly}
                   className="btn-primary text-lg w-full sm:w-auto"
-                  aria-label="Réserver ma séance d'Hypnotic Breathwork à 50 euros">
+                  aria-label="Réserver ma place — paiement sur place à Waterloo">
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                     d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
-            Réserver ma séance (50€)
+            Bloquer mon créneau — Paiement sur place
           </button>
+          {/* Micro-copy */}
+          <p className="text-white/40 text-sm italic">
+            Aucune carte bancaire requise · Règlement de 50€ le jour J (Espèces ou Payconiq)
+          </p>
           <a href="#about"
-             className="btn-outline text-base w-full sm:w-auto"
+             className="btn-outline text-base w-full sm:w-auto mt-1"
              aria-label="En savoir plus sur Belgium Breathwork">
             En savoir plus
           </a>

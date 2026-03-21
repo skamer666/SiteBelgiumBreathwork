@@ -44,7 +44,7 @@ export default function Footer({ calendlyUrl }) {
             </div>
             <p className="text-sm leading-relaxed max-w-xs mb-6">
               Séances d'Hypnotic Breathwork en Belgique pour libérer tes émotions et retrouver l'équilibre.
-              Certifiée IPHM, formée à Bali.
+              Certifiée IPHM.
             </p>
             {/* Social */}
             <div className="flex gap-3">

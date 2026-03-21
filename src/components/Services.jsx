@@ -3,38 +3,40 @@ import { useInView } from '../hooks/useInView'
 
 const services = [
   {
-    tag:     'Offre phare',
-    title:   'Séance individuelle',
+    tag:     '🌿 Offre phare',
+    title:   'Séance de groupe',
     sub:     'Hypnotic Breathwork',
     price:   '50',
     unit:    '€',
+    desc:    'Une expérience collective portée par l\'énergie du groupe. Favorise le lâcher-prise, la libération et la connexion humaine profonde.',
+    payment: 'Je privilégie la confiance. Tu ne paies rien lors de la réservation. Le règlement se fait directement après la séance, à Waterloo — Espèces ou Payconiq.',
+    features: [
+      'Formats réguliers ou événements',
+      'Énergie collective amplifiante',
+      'Idéal pour découvrir la pratique',
+      'Réservation en ligne, paiement sur place',
+    ],
+    cta:     'Bloquer mon créneau (0€ aujourd\'hui)',
+    ctaCalendly: true,
+    highlight: true,
+    color:   'from-sage-900 to-navy-700',
+    badge:   '✦ Le plus accessible',
+  },
+  {
+    tag:     'Individuel',
+    title:   'Séance individuelle',
+    sub:     'Accompagnement personnalisé',
+    price:   '150',
+    unit:    '€',
     desc:    'Un accompagnement personnalisé, adapté à ton rythme et à tes besoins. Idéal pour travailler en profondeur sur des blocages ou un objectif précis.',
+    payment: 'Réservation gratuite en ligne. Règlement de 150€ directement sur place à Waterloo, après ta séance — Espèces ou Payconiq.',
     features: [
       '60 à 90 minutes de session',
       'Respiration + hypnose + visualisation',
       'Suivi personnalisé post-séance',
       'Espace sécurisé et bienveillant',
     ],
-    cta:     'Réserver (50€)',
-    ctaCalendly: true,
-    highlight: true,
-    color:   'from-sage-900 to-navy-700',
-    badge:   '🌿 Le plus populaire',
-  },
-  {
-    tag:     'En groupe',
-    title:   'Séance collective',
-    sub:     'Expérience partagée',
-    price:   '50',
-    unit:    '€',
-    desc:    'Une expérience collective portée par l\'énergie du groupe. Favorise le lâcher-prise, la libération et la connexion humaine profonde.',
-    features: [
-      'Formats réguliers ou événements',
-      'Énergie collective amplifiante',
-      'Idéal pour découvrir la pratique',
-      'Réservation en ligne disponible',
-    ],
-    cta:     'Réserver en ligne',
+    cta:     'Je réserve ma place (0€ aujourd\'hui)',
     ctaCalendly: true,
     highlight: false,
     color:   'from-navy-600 to-navy-800',
@@ -178,6 +180,13 @@ export default function Services({ calendlyUrl }) {
                      aria-label={`${s.cta} – ${s.title}`}>
                     {s.cta}
                   </a>
+                )}
+
+                {/* Payment reassurance micro-copy */}
+                {s.payment && (
+                  <p className="text-white/35 text-xs leading-relaxed mt-3 italic text-center">
+                    {s.payment}
+                  </p>
                 )}
               </div>
             </motion.article>
