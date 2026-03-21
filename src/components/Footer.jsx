@@ -30,7 +30,7 @@ export default function Footer({ calendlyUrl }) {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="mb-4">
-              <img src="/images/logo.png" alt="Belgium Breathwork" className="h-10 w-auto object-contain" />
+              <img src="/images/logo.png" alt="Belgium Breathwork" className="h-10 w-auto object-contain rounded-lg bg-white px-2 py-1" />
             </div>
             <p className="text-sm leading-relaxed max-w-xs mb-6">
               Séances d'Hypnotic Breathwork en Belgique pour libérer tes émotions et retrouver l'équilibre.
