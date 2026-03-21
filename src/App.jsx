@@ -10,7 +10,8 @@ import Testimonials from './components/Testimonials'
 import FAQ         from './components/FAQ'
 import CTABanner   from './components/CTABanner'
 import Footer      from './components/Footer'
-import MobileCTA   from './components/MobileCTA'
+import MobileCTA       from './components/MobileCTA'
+import WhatsAppButton  from './components/WhatsAppButton'
 
 const CALENDLY_URL = 'https://calendly.com/belgiumbreathwork'
 
@@ -49,6 +50,9 @@ export default function App() {
 
       {/* Sticky bottom CTA – mobile only */}
       <MobileCTA calendlyUrl={CALENDLY_URL} />
+
+      {/* WhatsApp floating button */}
+      <WhatsAppButton />
     </div>
   )
 }
