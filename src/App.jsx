@@ -1,7 +1,8 @@
 import { useScroll, useSpring, motion } from 'framer-motion'
-import Navbar      from './components/Navbar'
-import Hero        from './components/Hero'
-import PainPoints  from './components/PainPoints'
+import Navbar           from './components/Navbar'
+import Hero             from './components/Hero'
+import ProchainSeances  from './components/ProchainSeances'
+import PainPoints       from './components/PainPoints'
 import HowItWorks  from './components/HowItWorks'
 import About       from './components/About'
 import Services    from './components/Services'
@@ -33,7 +34,8 @@ export default function App() {
       <Navbar calendlyUrl={CALENDLY_URL} />
 
       <main>
-        <Hero       calendlyUrl={CALENDLY_URL} />
+        <Hero              calendlyUrl={CALENDLY_URL} />
+        <ProchainSeances   calendlyUrl={CALENDLY_URL} />
         <PainPoints />
         <HowItWorks />
         <About      calendlyUrl={CALENDLY_URL} />
