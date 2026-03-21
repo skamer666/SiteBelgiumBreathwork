@@ -26,9 +26,20 @@ export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Cache-Control', 's-maxage=180, stale-while-revalidate=60')
 
+  // Debug : vérifie que les variables sont bien chargées
+  if (!TOKEN || !process.env.CALENDLY_EVENT_TYPE_UUID) {
+    return res.status(500).json({
+      error: 'Variables manquantes',
+      debug: {
+        hasToken: !!TOKEN,
+        hasEventUUID: !!process.env.CALENDLY_EVENT_TYPE_UUID,
+      },
+      seances: []
+    })
+  }
+
   try {
     const now    = new Date()
-    // Démarre 2 minutes dans le futur (exigence Calendly)
     now.setMinutes(now.getMinutes() + 2)
 
     // Enchaîne 4 fenêtres de 7 jours = 28 jours de dispo

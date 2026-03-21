@@ -49,19 +49,20 @@ function SkeletonCard() {
 
 export default function ProchainSeances({ calendlyUrl }) {
   const [ref, inView]     = useInView(0.1)
-  const [seances, setSeances] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [erreur, setErreur]   = useState(false)
+  const [seances,  setSeances]  = useState([])
+  const [loading,  setLoading]  = useState(true)
+  const [erreur,   setErreur]   = useState(null)
 
   useEffect(() => {
     fetch('/api/prochaines-seances')
       .then(r => r.json())
       .then(data => {
+        if (data.error) setErreur(data.error + ' — ' + JSON.stringify(data.debug || {}))
         setSeances(data.seances || [])
         setLoading(false)
       })
-      .catch(() => {
-        setErreur(true)
+      .catch(e => {
+        setErreur('Fetch échoué : ' + e.message)
         setLoading(false)
       })
   }, [])
@@ -77,10 +78,8 @@ export default function ProchainSeances({ calendlyUrl }) {
 
   // Affiche l'erreur pour debug
   if (!loading && erreur) return (
-    <section className="bg-navy-700 py-10 text-center">
-      <p className="text-red-400 text-sm font-mono">
-        ⚠ Erreur API — vérifie les variables d'environnement Vercel
-      </p>
+    <section className="bg-navy-700 py-10 text-center px-4">
+      <p className="text-red-400 text-sm font-mono break-all">⚠ {erreur}</p>
     </section>
   )
 
