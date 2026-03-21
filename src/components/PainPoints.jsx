@@ -61,7 +61,7 @@ export default function PainPoints() {
 
   return (
     <section id="pourquoi" ref={ref} aria-labelledby="pain-title"
-             className="bg-navy-700 section-pad">
+             className="bg-white section-pad">
       <div className="container-max">
         {/* Header */}
         <motion.div
@@ -70,14 +70,14 @@ export default function PainPoints() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <span className="section-tag text-sage-300 border-sage-700 bg-sage-900/30 mb-6">
+          <span className="section-tag text-sage-700 border-sage-200 bg-sage-50 mb-6">
             Tu te reconnais ?
           </span>
-          <h2 id="pain-title" className="heading-lg text-white mb-4">
+          <h2 id="pain-title" className="heading-lg text-navy-700 mb-4">
             Et si c'était exactement{' '}
             <span className="text-gradient">ce que tu vis</span> ?
           </h2>
-          <p className="body-lg text-white/60 max-w-xl mx-auto">
+          <p className="body-lg text-navy-400 max-w-xl mx-auto">
             Tu n'es pas seul(e). Ces sensations sont le signal que quelque chose cherche
             à s'exprimer — et le breathwork peut t'aider à l'entendre.
           </p>
@@ -93,19 +93,19 @@ export default function PainPoints() {
               initial="hidden"
               animate={inView ? 'show' : 'hidden'}
               role="listitem"
-              className="glass-card rounded-2xl p-6 hover:border-sage-700/50 transition-all duration-300
-                         hover:shadow-glow-sage group"
+              className="bg-white rounded-2xl p-6 border border-sage-100 shadow-card
+                         hover:border-sage-300 hover:shadow-soft transition-all duration-300 group"
             >
               <div className="flex gap-4">
-                <div className="shrink-0 w-12 h-12 rounded-xl bg-sage-900/60 flex items-center justify-center
-                                text-sage-400 group-hover:bg-sage-800/60 transition-colors duration-300">
+                <div className="shrink-0 w-12 h-12 rounded-xl bg-sage-50 flex items-center justify-center
+                                text-sage-600 group-hover:bg-sage-100 transition-colors duration-300 border border-sage-100">
                   {p.icon}
                 </div>
                 <div>
-                  <h3 className="font-montserrat font-semibold text-white mb-2 text-base leading-snug">
+                  <h3 className="font-montserrat font-semibold text-navy-700 mb-2 text-base leading-snug">
                     {p.title}
                   </h3>
-                  <p className="text-white/55 text-sm leading-relaxed">{p.body}</p>
+                  <p className="text-navy-400 text-sm leading-relaxed">{p.body}</p>
                 </div>
               </div>
             </motion.div>
@@ -117,11 +117,11 @@ export default function PainPoints() {
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.6, duration: 0.5 }}
-          className="text-center text-white/50 text-base mt-12 italic max-w-lg mx-auto"
+          className="text-center text-navy-400/70 text-base mt-12 italic max-w-lg mx-auto"
         >
           "J'étais très cartésienne, avec beaucoup de mal à lâcher prise. Je ne pensais pas être
           la personne idéale… et pourtant."
-          <span className="block mt-2 text-sage-400 not-italic text-sm font-medium">
+          <span className="block mt-2 text-sage-600 not-italic text-sm font-medium">
             — Marine Paquet, cliente
           </span>
         </motion.p>

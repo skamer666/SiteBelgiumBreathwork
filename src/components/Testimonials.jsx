@@ -8,28 +8,25 @@ const testimonials = [
     author: 'Marine Paquet',
     source: 'Story Instagram',
     initials: 'MP',
-    color: 'from-sage-700 to-sage-900',
   },
   {
     text: 'Daphné est une grande voyageuse, bienveillante, à l\'écoute et très inspirante. Je ne suis pas du genre à me laisser aller facilement, mais là… j\'ai voyagé. Littéralement. J\'ai eu l\'impression de traverser le temps. C\'était comme un rêve lucide. Grâce à l\'accompagnement bienveillant de la facilitatrice, tout a été simple.',
     author: 'Cliente',
     source: 'Commentaire Instagram',
     initials: 'CL',
-    color: 'from-navy-600 to-navy-800',
   },
   {
     text: 'Merci Daphné pour cette séance de breathwork intense mais tellement libératrice. En rentrant, encore toute bouleversée, j\'ai raconté ce que j\'avais vécu… comme si j\'avais traversé une autre vie. J\'ai rencontré la petite moi, j\'ai ressenti des choses incroyables, à la limite du rationnel, mais tellement réelles sur le moment. Je ne me souvenais pas d\'avoir été intérieurement aussi sereine depuis très longtemps.',
     author: 'Cliente',
     source: 'Belgium Breathwork',
     initials: 'CL',
-    color: 'from-sage-800 to-navy-700',
   },
 ]
 
 const StarRating = () => (
   <div className="flex gap-0.5 mb-4" role="img" aria-label="5 étoiles sur 5">
     {[...Array(5)].map((_, i) => (
-      <svg key={i} className="w-4 h-4 text-sand-300 fill-sand-300" viewBox="0 0 20 20" aria-hidden="true">
+      <svg key={i} className="w-4 h-4 text-sand-400 fill-sand-400" viewBox="0 0 20 20" aria-hidden="true">
         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
       </svg>
     ))}
@@ -73,10 +70,10 @@ export default function Testimonials() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <span className="section-tag text-navy-400 border-navy-100 bg-navy-50 mb-6">
+          <span className="section-tag text-navy-400 border-navy-100 bg-white mb-6">
             Témoignages
           </span>
-          <h2 id="testi-title" className="heading-lg text-navy-500 mb-4">
+          <h2 id="testi-title" className="heading-lg text-navy-700 mb-4">
             Elles et ils ont{' '}
             <span className="text-gradient">osé le voyage</span>
           </h2>
@@ -92,7 +89,8 @@ export default function Testimonials() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="max-w-2xl mx-auto"
         >
-          <div className="relative overflow-hidden rounded-3xl bg-navy-500 p-8 md:p-10 min-h-[280px] flex flex-col">
+          <div className="relative overflow-hidden rounded-3xl bg-white border border-sage-100
+                          shadow-lift p-8 md:p-10 min-h-[280px] flex flex-col">
             <AnimatePresence custom={direction} mode="wait">
               <motion.div
                 key={active}
@@ -107,28 +105,28 @@ export default function Testimonials() {
                 <StarRating />
 
                 {/* Quote */}
-                <svg className="w-8 h-8 text-sage-600/40 mb-3" fill="currentColor"
+                <svg className="w-8 h-8 text-sage-300 mb-3" fill="currentColor"
                      viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
                 </svg>
 
                 <blockquote>
-                  <p className="text-white/80 text-base leading-relaxed mb-6 italic">
+                  <p className="text-navy-500 text-base leading-relaxed mb-6 italic">
                     "{testimonials[active].text}"
                   </p>
                 </blockquote>
 
                 <div className="flex items-center gap-3">
-                  <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${testimonials[active].color}
-                                   flex items-center justify-center text-white font-montserrat font-bold text-sm`}
-                       aria-hidden="true">
+                  <div className="w-10 h-10 rounded-full bg-sage-100 border border-sage-200
+                                   flex items-center justify-center text-sage-700 font-montserrat
+                                   font-bold text-sm" aria-hidden="true">
                     {testimonials[active].initials}
                   </div>
                   <div>
-                    <p className="font-montserrat font-semibold text-white text-sm">
+                    <p className="font-montserrat font-semibold text-navy-700 text-sm">
                       {testimonials[active].author}
                     </p>
-                    <p className="text-white/40 text-xs">{testimonials[active].source}</p>
+                    <p className="text-navy-400/60 text-xs">{testimonials[active].source}</p>
                   </div>
                 </div>
               </motion.div>
@@ -138,9 +136,10 @@ export default function Testimonials() {
           {/* Controls */}
           <div className="flex items-center justify-between mt-6">
             <button onClick={prev}
-                    className="w-11 h-11 rounded-full border border-navy-200 flex items-center justify-center
-                               text-navy-400 hover:bg-navy-500 hover:text-white hover:border-navy-500
-                               transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-navy-400"
+                    className="w-11 h-11 rounded-full border border-navy-100 bg-white flex items-center
+                               justify-center text-navy-400 hover:bg-sage-50 hover:border-sage-300
+                               hover:text-sage-700 transition-all duration-200 shadow-soft
+                               focus:outline-none focus:ring-2 focus:ring-sage-400"
                     aria-label="Témoignage précédent">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -155,15 +154,16 @@ export default function Testimonials() {
                         aria-selected={i === active}
                         aria-label={`Témoignage ${i + 1}`}
                         className={`h-2 rounded-full transition-all duration-300
-                          ${i === active ? 'w-8 bg-sage-500' : 'w-2 bg-navy-200 hover:bg-navy-300'}`}
+                          ${i === active ? 'w-8 bg-sage-500' : 'w-2 bg-sage-200 hover:bg-sage-300'}`}
                 />
               ))}
             </div>
 
             <button onClick={next}
-                    className="w-11 h-11 rounded-full border border-navy-200 flex items-center justify-center
-                               text-navy-400 hover:bg-navy-500 hover:text-white hover:border-navy-500
-                               transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-navy-400"
+                    className="w-11 h-11 rounded-full border border-navy-100 bg-white flex items-center
+                               justify-center text-navy-400 hover:bg-sage-50 hover:border-sage-300
+                               hover:text-sage-700 transition-all duration-200 shadow-soft
+                               focus:outline-none focus:ring-2 focus:ring-sage-400"
                     aria-label="Témoignage suivant">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -180,7 +180,7 @@ export default function Testimonials() {
           className="text-center mt-10"
         >
           <a href="https://instagram.com/belgium.breathwork" target="_blank" rel="noopener noreferrer"
-             className="inline-flex items-center gap-2 text-navy-400 hover:text-navy-500
+             className="inline-flex items-center gap-2 text-navy-400 hover:text-sage-700
                         text-sm font-medium transition-colors duration-200"
              aria-label="Voir plus de témoignages sur Instagram">
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

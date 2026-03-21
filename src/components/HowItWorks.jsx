@@ -12,7 +12,8 @@ const pillars = [
   {
     title: 'Respiration consciente',
     desc: 'Des cycles guidés qui activent des états modifiés de conscience — sans substances, en toute sécurité.',
-    color: 'from-sage-800/60 to-sage-900/40',
+    bg: 'bg-sage-50',
+    border: 'border-sage-200',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
            className="w-7 h-7" aria-hidden="true">
@@ -24,7 +25,8 @@ const pillars = [
   {
     title: 'Induction hypnotique',
     desc: 'Un guidage vocal doux qui permet à l\'inconscient d\'accéder à ses propres ressources et vérités.',
-    color: 'from-navy-600/60 to-navy-700/40',
+    bg: 'bg-navy-50',
+    border: 'border-navy-100',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
            className="w-7 h-7" aria-hidden="true">
@@ -36,7 +38,8 @@ const pillars = [
   {
     title: 'Visualisation guidée',
     desc: 'Voyage intérieur : rencontrer la petite toi, traverser des paysages, libérer ce qui ne t\'appartient plus.',
-    color: 'from-sand-300/20 to-sand-200/10',
+    bg: 'bg-sand-50',
+    border: 'border-sand-100',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
            className="w-7 h-7" aria-hidden="true">
@@ -62,10 +65,10 @@ export default function HowItWorks() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <span className="section-tag text-navy-400 border-navy-100 bg-navy-50 mb-6">
+          <span className="section-tag text-navy-400 border-navy-100 bg-white mb-6">
             La méthode
           </span>
-          <h2 id="method-title" className="heading-lg text-navy-500 mb-4">
+          <h2 id="method-title" className="heading-lg text-navy-700 mb-4">
             La science{' '}
             <span className="text-gradient">au service de l'humain</span>
           </h2>
@@ -84,35 +87,35 @@ export default function HowItWorks() {
               initial={{ opacity: 0, y: 28 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: i * 0.13, duration: 0.5, ease: 'easeOut' }}
-              className={`rounded-2xl p-7 bg-gradient-to-br ${p.color} border border-navy-100
-                          hover:shadow-lift transition-all duration-300 group`}
+              className={`rounded-2xl p-7 ${p.bg} border ${p.border}
+                          hover:shadow-soft transition-all duration-300 group`}
             >
-              <div className="w-14 h-14 rounded-2xl bg-white/80 flex items-center justify-center
+              <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center
                               text-sage-600 mb-5 shadow-soft group-hover:shadow-glow-sage
-                              transition-shadow duration-300">
+                              transition-shadow duration-300 border border-sage-100">
                 {p.icon}
               </div>
-              <h3 className="font-montserrat font-bold text-navy-500 text-lg mb-3">{p.title}</h3>
+              <h3 className="font-montserrat font-bold text-navy-700 text-lg mb-3">{p.title}</h3>
               <p className="text-navy-400 text-sm leading-relaxed">{p.desc}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Science benefits */}
+        {/* Science benefits – dark sage accent box */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="bg-navy-500 rounded-3xl p-8 md:p-10"
+          className="bg-aurora-mid rounded-3xl p-8 md:p-10"
         >
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
             <div className="md:w-1/2">
-              <span className="section-tag text-sage-300 border-sage-700/50 bg-sage-900/40 mb-5 text-xs">
+              <span className="section-tag text-sage-200 border-sage-500/50 bg-sage-800/40 mb-5 text-xs">
                 Bienfaits scientifiques
               </span>
               <h3 className="heading-md text-white mb-4">
                 Ce que la recherche dit{' '}
-                <span className="text-gradient">de la respiration consciente</span>
+                <span className="text-gradient-gold">de la respiration consciente</span>
               </h3>
               <p className="text-white/60 text-sm leading-relaxed">
                 Des études en neurosciences confirment l'impact profond de la respiration
@@ -129,12 +132,12 @@ export default function HowItWorks() {
                   transition={{ delay: 0.6 + i * 0.1, duration: 0.4 }}
                   className="flex gap-3 items-start"
                 >
-                  <span className="shrink-0 w-8 h-8 rounded-full bg-sage-600/30 border border-sage-600/40
-                                   flex items-center justify-center text-sage-400 font-montserrat
+                  <span className="shrink-0 w-8 h-8 rounded-full bg-sage-600/30 border border-sage-500/40
+                                   flex items-center justify-center text-sage-200 font-montserrat
                                    font-bold text-sm" aria-hidden="true">
                     {b.number}
                   </span>
-                  <p className="text-white/75 text-sm leading-relaxed pt-1">{b.label}</p>
+                  <p className="text-white/80 text-sm leading-relaxed pt-1">{b.label}</p>
                 </motion.div>
               ))}
             </div>

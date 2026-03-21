@@ -32,17 +32,17 @@ export default function MobileCTA({ calendlyUrl }) {
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
           className="fixed bottom-0 left-0 right-0 z-40 md:hidden
-                     bg-navy-800/95 backdrop-blur-xl border-t border-white/10
-                     px-4 py-3 pb-safe"
+                     bg-white/96 backdrop-blur-xl border-t border-sage-100 shadow-lift
+                     px-4 py-3"
           style={{ paddingBottom: 'max(12px, env(safe-area-inset-bottom))' }}
           aria-label="Barre de réservation mobile"
         >
           <div className="flex items-center gap-3">
             <div className="flex-1">
-              <p className="text-white font-montserrat font-semibold text-sm leading-tight">
+              <p className="text-navy-700 font-montserrat font-semibold text-sm leading-tight">
                 Séance Hypnotic Breathwork
               </p>
-              <p className="text-sage-400 text-xs font-medium">50€ groupe · Paiement sur place à Waterloo</p>
+              <p className="text-sage-600 text-xs font-medium">50€ groupe · Paiement sur place à Waterloo</p>
             </div>
             <button
               onClick={handleCalendly}

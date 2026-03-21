@@ -19,9 +19,9 @@ export default function CTABanner({ calendlyUrl }) {
       {/* Background orbs */}
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="breathe-orb absolute -top-20 -right-20 w-80 h-80 rounded-full
-                        bg-sage-600/20 blur-3xl" />
+                        bg-sage-500/20 blur-3xl" />
         <div className="breathe-orb-2 absolute -bottom-16 -left-16 w-64 h-64 rounded-full
-                        bg-navy-400/20 blur-3xl" />
+                        bg-sage-300/15 blur-3xl" />
       </div>
 
       <div className="container-max relative z-10">
@@ -32,10 +32,10 @@ export default function CTABanner({ calendlyUrl }) {
           className="text-center max-w-2xl mx-auto"
         >
           {/* Icon */}
-          <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center
+          <div className="w-16 h-16 rounded-2xl glass-dark flex items-center justify-center
                           mx-auto mb-6 shadow-glass" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
-                 className="w-8 h-8 text-sage-300">
+                 className="w-8 h-8 text-sage-200">
               <path strokeLinecap="round" strokeLinejoin="round"
                     d="M12 3C12 3 6 7 6 12.5C6 15.5 8.7 18 12 18C15.3 18 18 15.5 18 12.5C18 7 12 3 12 3Z"
                     fill="currentColor" opacity="0.3"/>
@@ -52,15 +52,15 @@ export default function CTABanner({ calendlyUrl }) {
           <p className="body-lg text-white/65 mb-3">
             "Chaque respiration est une porte vers plus de sérénité, de clarté et de liberté intérieure."
           </p>
-          <p className="text-sage-400 text-sm font-medium mb-8">— Daphnée, Belgium Breathwork</p>
+          <p className="text-sage-300 text-sm font-medium mb-8">— Daphnée, Belgium Breathwork</p>
 
           {/* Price highlight */}
-          <div className="inline-flex items-center gap-3 glass rounded-2xl px-6 py-3 mb-4">
+          <div className="inline-flex items-center gap-3 glass-dark rounded-2xl px-6 py-3 mb-4">
             <span className="text-white/60 text-sm">Séance de groupe</span>
             <span className="w-px h-4 bg-white/20" aria-hidden="true" />
             <span className="font-montserrat font-black text-white text-2xl">50 €</span>
             <span className="w-px h-4 bg-white/20" aria-hidden="true" />
-            <span className="text-sage-400 text-sm">Paiement sur place</span>
+            <span className="text-sage-300 text-sm">Paiement sur place</span>
           </div>
 
           <p className="text-white/40 text-sm italic mb-6">

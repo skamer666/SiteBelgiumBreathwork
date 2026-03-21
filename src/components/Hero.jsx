@@ -25,43 +25,31 @@ export default function Hero({ calendlyUrl }) {
                  overflow-hidden bg-hero-bg px-4 md:px-8 pt-24 pb-16"
       aria-label="Section principale"
     >
-      {/* Background photo */}
+      {/* Background photo – very subtle texture on light bg */}
       <div aria-hidden="true" className="absolute inset-0">
         <img src="/images/seance-01.jpg" alt=""
-             className="w-full h-full object-cover opacity-20" loading="eager" />
-        <div className="absolute inset-0 bg-hero-bg opacity-85" />
+             className="w-full h-full object-cover opacity-[0.12]" loading="eager" />
+        <div className="absolute inset-0 bg-gradient-to-b from-cream/90 via-cream/70 to-sage-50/80" />
       </div>
 
-      {/* Aurora animated orbs */}
+      {/* Soft animated orbs – light sage tones */}
       <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="breathe-orb absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full
-                        bg-gradient-to-br from-sage-800/40 to-sage-600/20 blur-3xl" />
+                        bg-gradient-to-br from-sage-200/50 to-sage-100/30 blur-3xl" />
         <div className="breathe-orb-2 absolute -bottom-24 -right-24 w-[420px] h-[420px] rounded-full
-                        bg-gradient-to-tl from-navy-400/30 to-navy-600/20 blur-3xl" />
+                        bg-gradient-to-tl from-sand-100/60 to-sage-100/40 blur-3xl" />
         <div className="breathe-orb absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
                         w-[300px] h-[300px] rounded-full
-                        bg-gradient-to-br from-sand-200/10 to-sage-400/10 blur-2xl"
+                        bg-gradient-to-br from-sage-100/40 to-sand-50/30 blur-2xl"
              style={{ animationDelay: '3s' }} />
-        {/* Floating particles */}
-        {[...Array(6)].map((_, i) => (
-          <div key={i}
-               className="absolute w-1 h-1 rounded-full bg-sage-400/40"
-               style={{
-                 top:  `${15 + i * 14}%`,
-                 left: `${8 + i * 15}%`,
-                 animationDelay: `${i * 1.2}s`,
-               }}
-               aria-hidden="true"
-          />
-        ))}
       </div>
 
-      {/* Subtle grid texture */}
+      {/* Subtle dot grid texture */}
       <div aria-hidden="true"
-           className="absolute inset-0 opacity-[0.03]"
+           className="absolute inset-0 opacity-[0.025]"
            style={{
-             backgroundImage: 'linear-gradient(rgba(255,255,255,.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px)',
-             backgroundSize: '48px 48px',
+             backgroundImage: 'radial-gradient(circle, #4A7C59 1px, transparent 1px)',
+             backgroundSize: '32px 32px',
            }} />
 
       {/* Content */}
@@ -73,31 +61,31 @@ export default function Hero({ calendlyUrl }) {
       >
         {/* Badge */}
         <motion.div variants={fadeUp} className="mb-6 flex justify-center">
-          <span className="section-tag text-sage-300 border-sage-700/50 bg-sage-900/40">
-            <span className="w-1.5 h-1.5 rounded-full bg-sage-400 animate-pulse" aria-hidden="true" />
+          <span className="section-tag text-sage-700 border-sage-200 bg-sage-50">
+            <span className="w-1.5 h-1.5 rounded-full bg-sage-500 animate-pulse" aria-hidden="true" />
             Certifiée IPHM · Hypnotic Breathwork
           </span>
         </motion.div>
 
         {/* Headline */}
-        <motion.h1 variants={fadeUp} className="heading-xl text-white mb-4">
+        <motion.h1 variants={fadeUp} className="heading-xl text-navy-700 mb-4">
           Libère tes émotions.{' '}
           <span className="block text-gradient">Retrouve ton souffle.</span>
         </motion.h1>
 
         {/* Sub-headline */}
         <motion.p variants={fadeUp}
-                  className="body-lg text-white/70 mb-4 max-w-xl mx-auto">
-          Une séance d'<strong className="text-sage-300 font-semibold">Hypnotic Breathwork</strong> combine
+                  className="body-lg text-navy-500/80 mb-4 max-w-xl mx-auto">
+          Une séance d'<strong className="text-sage-700 font-semibold">Hypnotic Breathwork</strong> combine
           respiration consciente, hypnose et visualisation pour libérer ce que tu portes depuis trop longtemps.
         </motion.p>
 
         {/* Price signal */}
         <motion.p variants={fadeUp}
-                  className="text-sand-200/90 font-montserrat font-semibold text-lg mb-8">
+                  className="text-navy-500/70 font-montserrat font-semibold text-lg mb-8">
           Séance de groupe —{' '}
-          <span className="text-white bg-sage-600/40 px-3 py-1 rounded-full">50 €</span>
-          <span className="text-white/50 font-normal text-base ml-2">· Payable sur place</span>
+          <span className="text-navy-700 bg-sage-100 px-3 py-1 rounded-full">50 €</span>
+          <span className="text-navy-400 font-normal text-base ml-2">· Payable sur place</span>
         </motion.p>
 
         {/* CTA buttons */}
@@ -113,11 +101,11 @@ export default function Hero({ calendlyUrl }) {
             Bloquer mon créneau — Paiement sur place
           </button>
           {/* Micro-copy */}
-          <p className="text-white/40 text-sm italic">
+          <p className="text-navy-400/70 text-sm italic">
             Aucune carte bancaire requise · Règlement de 50€ le jour J (Espèces ou Payconiq)
           </p>
           <a href="#about"
-             className="btn-outline text-base w-full sm:w-auto mt-1"
+             className="btn-outline-light text-base w-full sm:w-auto mt-1"
              aria-label="En savoir plus sur Belgium Breathwork">
             En savoir plus
           </a>
@@ -125,14 +113,14 @@ export default function Hero({ calendlyUrl }) {
 
         {/* Trust bar */}
         <motion.div variants={fadeUp}
-                    className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-white/50 text-sm">
+                    className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-navy-400/70 text-sm">
           {[
             { icon: '✓', text: 'Sans engagement' },
-            { icon: '✓', text: 'Paiement en ligne sécurisé' },
-            { icon: '✓', text: 'Belgique – accès facile' },
+            { icon: '✓', text: 'Réservation sécurisée' },
+            { icon: '✓', text: 'Belgique – Waterloo' },
           ].map(({ icon, text }) => (
             <span key={text} className="flex items-center gap-1.5">
-              <span className="text-sage-400 font-bold" aria-hidden="true">{icon}</span>
+              <span className="text-sage-600 font-bold" aria-hidden="true">{icon}</span>
               {text}
             </span>
           ))}
@@ -147,12 +135,12 @@ export default function Hero({ calendlyUrl }) {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         aria-hidden="true"
       >
-        <span className="text-white/30 text-xs tracking-widest uppercase font-medium">Découvrir</span>
-        <div className="w-5 h-8 rounded-full border border-white/20 flex items-start justify-center p-1">
+        <span className="text-navy-400/50 text-xs tracking-widest uppercase font-medium">Découvrir</span>
+        <div className="w-5 h-8 rounded-full border border-navy-200 flex items-start justify-center p-1">
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
-            className="w-1 h-1.5 rounded-full bg-sage-400"
+            className="w-1 h-1.5 rounded-full bg-sage-500"
           />
         </div>
       </motion.div>

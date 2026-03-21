@@ -20,29 +20,37 @@
 }
 
 @layer components {
-  /* Glassmorphism */
+  /* Glassmorphism – light theme */
   .glass {
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(74, 124, 89, 0.18);
   }
   .glass-light {
-    background: rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.95);
   }
   .glass-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(74, 124, 89, 0.14);
+    box-shadow: 0 2px 12px rgba(27, 45, 79, 0.06);
+  }
+  /* Glass for dark sections (CTABanner) */
+  .glass-dark {
+    background: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(124, 154, 126, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.18);
   }
 
   /* Text gradient */
   .text-gradient {
-    background: linear-gradient(135deg, #A8C5A0, #7C9A7E, #5578B1);
+    background: linear-gradient(135deg, #4A7C59, #7C9A7E, #5578B1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -63,6 +71,7 @@
            focus:outline-none focus:ring-2 focus:ring-sage-400 focus:ring-offset-2;
     min-height: 56px;
   }
+  /* Outline for dark section backgrounds */
   .btn-outline {
     @apply inline-flex items-center justify-center gap-2 border-2 border-white/40
            text-white hover:border-white hover:bg-white/10 font-semibold font-montserrat
@@ -70,8 +79,16 @@
            focus:outline-none focus:ring-2 focus:ring-white/50;
     min-height: 56px;
   }
+  /* Outline for light section backgrounds */
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center gap-2 border-2 border-navy-200
+           text-navy-600 hover:border-sage-600 hover:bg-sage-50 hover:text-sage-700
+           font-semibold font-montserrat px-7 py-4 rounded-full transition-all duration-300
+           focus:outline-none focus:ring-2 focus:ring-sage-400;
+    min-height: 56px;
+  }
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 text-sage-400 hover:text-sage-300
+    @apply inline-flex items-center justify-center gap-2 text-sage-600 hover:text-sage-700
            font-medium underline underline-offset-4 transition-colors duration-200;
   }
 
@@ -107,23 +124,23 @@
 
 /* Breathing orb animation */
 @keyframes breathe-orb {
-  0%, 100% { transform: scale(1) rotate(0deg);   opacity: 0.25; }
-  33%       { transform: scale(1.15) rotate(60deg);  opacity: 0.45; }
-  66%       { transform: scale(0.92) rotate(120deg); opacity: 0.3;  }
+  0%, 100% { transform: scale(1) rotate(0deg);   opacity: 0.18; }
+  33%       { transform: scale(1.15) rotate(60deg);  opacity: 0.32; }
+  66%       { transform: scale(0.92) rotate(120deg); opacity: 0.22;  }
 }
 .breathe-orb { animation: breathe-orb 8s ease-in-out infinite; }
 
 @keyframes breathe-orb-2 {
-  0%, 100% { transform: scale(1) rotate(0deg);    opacity: 0.2; }
-  40%       { transform: scale(1.2) rotate(-80deg); opacity: 0.4; }
-  80%       { transform: scale(0.9) rotate(-160deg);opacity: 0.25;}
+  0%, 100% { transform: scale(1) rotate(0deg);    opacity: 0.15; }
+  40%       { transform: scale(1.2) rotate(-80deg); opacity: 0.28; }
+  80%       { transform: scale(0.9) rotate(-160deg);opacity: 0.18;}
 }
 .breathe-orb-2 { animation: breathe-orb-2 11s ease-in-out infinite; }
 
-/* Custom scrollbar */
+/* Custom scrollbar – light theme */
 ::-webkit-scrollbar       { width: 5px; }
-::-webkit-scrollbar-track { background: #1B2D4F; }
-::-webkit-scrollbar-thumb { background: #4A7C59; border-radius: 3px; }
+::-webkit-scrollbar-track { background: #F0F5F0; }
+::-webkit-scrollbar-thumb { background: #7C9A7E; border-radius: 3px; }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
