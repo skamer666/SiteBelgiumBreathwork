@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: 'Où se trouvent les séances ? Y a-t-il du parking ou une gare proche ?',
-    a: 'Les séances se déroulent à Waterloo, dans un espace calme et intimiste, facilement accessible. Parking disponible à proximité et accès en transport en commun. Les séances en ligne sont également possibles pour les individuelles. L\'adresse exacte est communiquée lors de la confirmation de réservation.',
+    a: 'Les séances se déroulent à Waterloo, dans un espace calme et intimiste, facilement accessible. Parking disponible à proximité et accès en transport en commun. L\'adresse exacte est communiquée lors de la confirmation de réservation.',
   },
   {
     q: 'Comment payer et comment réserver ?',
@@ -117,7 +117,6 @@ export default function FAQ() {
                 {[
                   { icon: '🚗', text: 'Parking disponible à proximité' },
                   { icon: '🚂', text: 'Accès facile en transport en commun' },
-                  { icon: '💻', text: 'Séances en ligne disponibles' },
                   { icon: '📞', text: '+32 494 20 40 93' },
                 ].map(({ icon, text }) => (
                   <li key={text} className="flex items-center gap-3">
