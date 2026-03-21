@@ -90,7 +90,7 @@ export default function Footer({ calendlyUrl }) {
             </h3>
             <ul className="space-y-3" role="list">
               <li>
-                <a href="https://wa.me/32451073813?text=Bonjour%20%F0%9F%8C%BF%20Je%20souhaite%20en%20savoir%20plus%20sur%20les%20s%C3%A9ances%20de%20Breathwork%20!"
+                <a href="https://wa.me/32451073813?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20les%20s%C3%A9ances%20de%20Breathwork%20!"
                    target="_blank" rel="noopener noreferrer"
                    className="flex items-center gap-2 text-sm hover:text-green-400 transition-colors duration-200">
                   <svg className="w-4 h-4 text-green-500 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
