@@ -25,7 +25,7 @@ const services = [
     tag:     'En groupe',
     title:   'Séance collective',
     sub:     'Expérience partagée',
-    price:   '60',
+    price:   '50',
     unit:    '€',
     desc:    'Une expérience collective portée par l\'énergie du groupe. Favorise le lâcher-prise, la libération et la connexion humaine profonde.',
     features: [

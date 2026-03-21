@@ -68,7 +68,7 @@ export default function Hero({ calendlyUrl }) {
         <motion.div variants={fadeUp} className="mb-6 flex justify-center">
           <span className="section-tag text-sage-300 border-sage-700/50 bg-sage-900/40">
             <span className="w-1.5 h-1.5 rounded-full bg-sage-400 animate-pulse" aria-hidden="true" />
-            Certifiée IPHM · Formée à Bali
+            Certifiée IPHM · Hypnotic Breathwork
           </span>
         </motion.div>
 

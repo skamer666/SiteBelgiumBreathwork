@@ -3,7 +3,7 @@ import { useInView } from '../hooks/useInView'
 
 const credentials = [
   { label: 'Certifiée IPHM', sub: 'International Practitioners of Holistic Medicine' },
-  { label: 'Formée à Bali', sub: 'Siamlee Transformation – Hypnotic Breathwork' },
+  { label: 'Siamlee Transformation', sub: 'Formation Hypnotic Breathwork certifiée IPHM' },
   { label: 'Accompagnement holistique', sub: 'Corps · Mental · Inconscient' },
 ]
 
@@ -89,7 +89,7 @@ export default function About({ calendlyUrl }) {
               </p>
               <p>
                 Ce chemin m'a conduite à me former en <strong className="text-sage-300 font-medium">Hypnotic Breathwork</strong>{' '}
-                auprès de <strong className="text-white/90 font-medium">Siamlee Transformation à Bali</strong>,
+                auprès de <strong className="text-white/90 font-medium">Siamlee Transformation</strong>,
                 une formation certifiée et reconnue par <strong className="text-white/90 font-medium">IPHM</strong>.
               </p>
               <p>

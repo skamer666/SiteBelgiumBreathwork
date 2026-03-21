@@ -86,7 +86,7 @@ export default function CTABanner({ calendlyUrl }) {
 
           {/* Trust signals */}
           <div className="flex flex-wrap justify-center gap-6 mt-8 text-white/40 text-xs">
-            {['✦ Certifiée IPHM', '✦ Formée à Bali', '✦ Sans engagement', '✦ Belgique'].map((t) => (
+            {['✦ Certifiée IPHM', '✦ Siamlee Transformation', '✦ Sans engagement', '✦ Belgique'].map((t) => (
               <span key={t}>{t}</span>
             ))}
           </div>
