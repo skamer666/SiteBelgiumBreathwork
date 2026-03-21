@@ -21,8 +21,8 @@ export default function Hero({ calendlyUrl }) {
 
   return (
     <section
-      className="relative min-h-[100dvh] flex flex-col justify-center items-center text-center
-                 overflow-hidden bg-hero-bg px-4 md:px-8 pt-24 pb-16"
+      className="relative min-h-[100dvh] flex flex-col items-center text-center
+                 overflow-hidden bg-hero-bg px-4 md:px-8"
       aria-label="Section principale"
     >
       {/* Background photo – very subtle texture on light bg */}
@@ -52,12 +52,12 @@ export default function Hero({ calendlyUrl }) {
              backgroundSize: '32px 32px',
            }} />
 
-      {/* Content */}
+      {/* Content – flex-1 so it takes all available space and centers itself */}
       <motion.div
         variants={stagger}
         initial="hidden"
         animate="show"
-        className="relative z-10 max-w-3xl mx-auto"
+        className="relative z-10 max-w-3xl mx-auto flex-1 flex flex-col justify-center pt-28 pb-8 w-full"
       >
         {/* Badge */}
         <motion.div variants={fadeUp} className="mb-6 flex justify-center">
@@ -127,12 +127,12 @@ export default function Hero({ calendlyUrl }) {
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator – part of normal flow, always at bottom */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.4, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="relative z-10 flex flex-col items-center gap-2 pb-8"
         aria-hidden="true"
       >
         <span className="text-navy-400/50 text-xs tracking-widest uppercase font-medium">Découvrir</span>
