@@ -28,11 +28,17 @@
     <!-- Calendly booking conversion tracking -->
     <script>
       window.addEventListener('message', function(e) {
-        if (e.data && e.data.event === 'calendly.event_scheduled') {
-          if (typeof fbq === 'function') {
-            fbq('track', 'Schedule');
+        try {
+          var data = e.data;
+          if (typeof data === 'string') {
+            data = JSON.parse(data);
           }
-        }
+          if (data && data.event === 'calendly.event_scheduled') {
+            if (typeof fbq === 'function') {
+              fbq('track', 'Schedule');
+            }
+          }
+        } catch(err) {}
       });
     </script>
 
