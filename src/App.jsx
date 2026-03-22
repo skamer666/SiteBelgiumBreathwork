@@ -6,6 +6,7 @@ import PainPoints       from './components/PainPoints'
 import HowItWorks  from './components/HowItWorks'
 import About       from './components/About'
 import Services    from './components/Services'
+import GaleriePhotos from './components/GaleriePhotos'
 import Testimonials from './components/Testimonials'
 import FAQ         from './components/FAQ'
 import CTABanner   from './components/CTABanner'
@@ -41,6 +42,7 @@ export default function App() {
         <HowItWorks />
         <About      calendlyUrl={CALENDLY_URL} />
         <Services   calendlyUrl={CALENDLY_URL} />
+        <GaleriePhotos />
         <Testimonials />
         <FAQ />
         <CTABanner  calendlyUrl={CALENDLY_URL} />
