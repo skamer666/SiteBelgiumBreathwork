@@ -28,7 +28,7 @@ const services = [
     price:   '150',
     unit:    '€',
     desc:    'Un accompagnement personnalisé, adapté à ton rythme et à tes besoins. Idéal pour travailler en profondeur sur des blocages ou un objectif précis.',
-    payment: 'Paiement sécurisé en ligne de 150€ lors de la réservation. Ta place est garantie, tu arrives l'esprit libre.',
+    payment: "Paiement sécurisé en ligne de 150€ lors de la réservation. Ta place est garantie, tu arrives l'esprit libre.",
     features: [
       '60 à 90 minutes de session',
       'Respiration + hypnose + visualisation',
