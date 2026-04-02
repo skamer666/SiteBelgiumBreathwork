@@ -109,10 +109,10 @@ export default function About({ calendlyUrl }) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                       d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              Bloquer mon créneau — 0€ aujourd'hui
+              Réserver ma place — 50 €
             </button>
             <p className="text-navy-400/60 text-xs italic mt-3">
-              Séance de groupe · 50€ sur place · Aucune CB requise
+              Séance de groupe · 50€ · Paiement sécurisé en ligne
             </p>
           </motion.div>
         </div>

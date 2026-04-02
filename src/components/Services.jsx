@@ -9,14 +9,14 @@ const services = [
     price:   '50',
     unit:    '€',
     desc:    'Une expérience collective portée par l\'énergie du groupe. Favorise le lâcher-prise, la libération et la connexion humaine profonde.',
-    payment: 'Je privilégie la confiance. Tu ne paies rien lors de la réservation. Le règlement se fait directement après la séance, à Waterloo — Espèces ou Payconiq.',
+    payment: 'Réservation et paiement en ligne simple et sécurisé. Ta place est confirmée instantanément — aucune surprise le jour J.',
     features: [
       'Formats réguliers ou événements',
       'Énergie collective amplifiante',
       'Idéal pour découvrir la pratique',
-      'Réservation en ligne, paiement sur place',
+      'Réservation et paiement en ligne sécurisé',
     ],
-    cta:     'Bloquer mon créneau (0€ aujourd\'hui)',
+    cta:     'Réserver ma place — 50 €',
     ctaCalendly: true,
     highlight: true,
     badge:   '✦ Le plus accessible',
@@ -28,7 +28,7 @@ const services = [
     price:   '150',
     unit:    '€',
     desc:    'Un accompagnement personnalisé, adapté à ton rythme et à tes besoins. Idéal pour travailler en profondeur sur des blocages ou un objectif précis.',
-    payment: 'Réservation gratuite en ligne. Règlement de 150€ directement sur place à Waterloo, après ta séance — Espèces ou Payconiq.',
+    payment: 'Paiement sécurisé en ligne de 150€ lors de la réservation. Ta place est garantie, tu arrives l'esprit libre.',
     features: [
       '60 à 90 minutes de session',
       'Respiration + hypnose + visualisation',
@@ -149,7 +149,7 @@ export default function Services({ calendlyUrl }) {
                       <span className={`text-xl font-medium
                         ${s.highlight ? 'text-white/70' : 'text-navy-400'}`}>{s.unit}</span>
                       <span className={`text-xs ml-1 ${s.highlight ? 'text-white/45' : 'text-navy-300'}`}>
-                        · sur place
+                        · en ligne
                       </span>
                     </div>
                   ) : (

@@ -24,8 +24,8 @@ const faqs = [
     a: 'Les séances se déroulent à Waterloo, dans un espace calme et intimiste, facilement accessible. Parking disponible à proximité et accès en transport en commun. L\'adresse exacte est communiquée lors de la confirmation de réservation.',
   },
   {
-    q: 'Comment payer et comment réserver ?',
-    a: 'La réservation se fait directement en ligne via Calendly — rapide, simple, sans carte bancaire requise. Tu ne paies rien en avance. Le règlement se fait directement après ta séance à Waterloo, en espèces ou via Payconiq. Pour les séances entreprise, contacte Daphnée par email ou téléphone.',
+    q: 'Comment réserver et payer ?',
+    a: 'La réservation se fait directement en ligne — rapide et simple. Le paiement est sécurisé et s\'effectue au moment de la réservation, ce qui te garantit ta place immédiatement. Pour les séances entreprise, contacte Daphnée par email ou téléphone.',
   },
 ]
 

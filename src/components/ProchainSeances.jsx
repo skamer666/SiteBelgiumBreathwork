@@ -112,7 +112,7 @@ export default function ProchainSeances({ calendlyUrl }) {
             <span className="text-gradient">séances de groupe</span>
           </h2>
           <p className="text-navy-400 body-md max-w-md mx-auto">
-            Réserve ta place maintenant — 0€ aujourd'hui, 50€ sur place à Waterloo.
+            Réserve ta place maintenant — paiement sécurisé en ligne, place confirmée instantanément.
           </p>
         </motion.div>
 
@@ -166,7 +166,7 @@ export default function ProchainSeances({ calendlyUrl }) {
                   <div className="flex items-baseline gap-1">
                     <span className="font-montserrat font-black text-3xl text-navy-700">50</span>
                     <span className="text-navy-400 text-lg">€</span>
-                    <span className="text-navy-300 text-xs ml-1">· sur place</span>
+                    <span className="text-navy-300 text-xs ml-1">· en ligne</span>
                   </div>
 
                   {/* Jauge places */}
@@ -188,10 +188,10 @@ export default function ProchainSeances({ calendlyUrl }) {
                         className="btn-primary w-full justify-center text-sm"
                         aria-label={`Réserver la séance du ${date} à ${heure}`}
                       >
-                        Bloquer ma place — 0€ aujourd'hui
+                        Réserver ma place — 50 €
                       </a>
                       <p className="text-navy-400/50 text-xs text-center mt-2 italic">
-                        Aucune CB requise · Payconiq ou espèces sur place
+                        Paiement sécurisé en ligne · Place confirmée instantanément
                       </p>
                     </div>
 

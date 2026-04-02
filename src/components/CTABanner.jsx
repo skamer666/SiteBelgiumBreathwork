@@ -60,22 +60,22 @@ export default function CTABanner({ calendlyUrl }) {
             <span className="w-px h-4 bg-white/20" aria-hidden="true" />
             <span className="font-montserrat font-black text-white text-2xl">50 €</span>
             <span className="w-px h-4 bg-white/20" aria-hidden="true" />
-            <span className="text-sage-300 text-sm">Paiement sur place</span>
+            <span className="text-sage-300 text-sm">Paiement sécurisé en ligne</span>
           </div>
 
           <p className="text-white/40 text-sm italic mb-6">
-            Aucune CB requise · Règlement après la séance à Waterloo (Espèces ou Payconiq)
+            Paiement simple et sécurisé en ligne · Ta place est garantie dès la réservation
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button onClick={handleCalendly}
                     className="btn-primary text-lg"
-                    aria-label="Bloquer mon créneau — paiement sur place">
+                    aria-label="Réserver ma place — paiement sécurisé en ligne">
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                       d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              Bloquer mon créneau — Paiement sur place
+              Réserver ma place — 50 €
             </button>
             <a href="tel:+32494204093"
                className="btn-outline text-base"
@@ -90,7 +90,7 @@ export default function CTABanner({ calendlyUrl }) {
 
           {/* Trust signals */}
           <div className="flex flex-wrap justify-center gap-6 mt-8 text-white/40 text-xs">
-            {['✦ Certifiée IPHM', '✦ Formation certifiée', '✦ Sans engagement', '✦ Belgique'].map((t) => (
+            {['✦ Certifiée IPHM', '✦ Formation certifiée', '✦ Paiement sécurisé', '✦ Belgique'].map((t) => (
               <span key={t}>{t}</span>
             ))}
           </div>
