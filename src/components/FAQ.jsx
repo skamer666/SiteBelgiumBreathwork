@@ -27,6 +27,14 @@ const faqs = [
     q: 'Comment réserver et payer ?',
     a: 'La réservation se fait directement en ligne — rapide et simple. Le paiement est sécurisé et s\'effectue au moment de la réservation, ce qui te garantit ta place immédiatement. Pour les séances entreprise, contacte Daphnée par email ou téléphone.',
   },
+  {
+    q: 'Le breathwork est-il scientifiquement prouvé ?',
+    a: 'Oui. Une étude de Stanford (2023) a démontré que 5 minutes de « soupir cyclique » surpassent la méditation traditionnelle pour réduire l\'anxiété et améliorer l\'humeur. Une étude portant sur 404 participants (Université du Queensland) confirme des améliorations significatives de l\'énergie et de la clarté mentale. La respiration abdominale pratiquée sur 8 semaines réduit les scores d\'anxiété de façon statistiquement significative (p<0,001). Ces effets s\'expliquent par la stimulation du nerf vague, qui abaisse le cortisol et les cytokines inflammatoires.',
+  },
+  {
+    q: 'Le breathwork peut-il aider à prévenir le burn-out en entreprise ?',
+    a: 'C\'est précisément pourquoi de plus en plus d\'entreprises s\'y intéressent. Selon Deloitte et l\'INAMI, 20 à 28,5 % des actifs belges risquent le burn-out, et chaque cas coûte en moyenne 23 677 € à l\'entreprise. Les programmes de bien-être adaptés montrent jusqu\'à 81 % de réduction de l\'absentéisme, avec un retour sur investissement de 6 € pour chaque euro investi (Deloitte). En Wallonie, les Chèques-Entreprises peuvent couvrir jusqu\'à 90 % du coût d\'un programme. Contacte Daphnée pour un devis entreprise personnalisé.',
+  },
 ]
 
 function FaqItem({ faq, isOpen, onToggle, index }) {

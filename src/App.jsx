@@ -8,6 +8,7 @@ import About       from './components/About'
 import Services    from './components/Services'
 import GaleriePhotos from './components/GaleriePhotos'
 import Testimonials from './components/Testimonials'
+import Etudes      from './components/Etudes'
 import FAQ         from './components/FAQ'
 import CTABanner   from './components/CTABanner'
 import Footer      from './components/Footer'
@@ -44,6 +45,7 @@ export default function App() {
         <Services   calendlyUrl={CALENDLY_URL} />
         <GaleriePhotos />
         <Testimonials />
+        <Etudes />
         <FAQ />
         <CTABanner  calendlyUrl={CALENDLY_URL} />
       </main>
