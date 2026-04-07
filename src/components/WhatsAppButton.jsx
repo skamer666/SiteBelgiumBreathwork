@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const WA_URL = 'https://wa.me/32451073813?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20les%20s%C3%A9ances%20de%20Breathwork%20%E2%80%94%20pouvez-vous%20m%E2%80%99aider%20%3F'
+const WA_URL = 'https://wa.me/32494204093?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20les%20s%C3%A9ances%20de%20Breathwork%20%E2%80%94%20pouvez-vous%20m%E2%80%99aider%20%3F'
 
 /**
  * Floating WhatsApp button – appears after 3s.

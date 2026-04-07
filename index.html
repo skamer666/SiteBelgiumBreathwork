@@ -3,12 +3,168 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Belgium Breathwork – Séances d'Hypnotic Breathwork en Belgique avec Daphnée. Libère tes émotions, retrouve l'équilibre. Certifiée IPHM. Réserve dès 50€ à Waterloo." />
-    <meta name="keywords" content="breathwork belgique, hypnotic breathwork, respiration consciente, bien-être, méditation belgique, libération émotionnelle, waterloo" />
-    <meta property="og:title" content="Belgium Breathwork – Libère tes émotions par la respiration" />
-    <meta property="og:description" content="Séances d'Hypnotic Breathwork dès 50€ à Waterloo. Certifiée IPHM. Réserve en ligne — paiement sur place." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <link rel="apple-touch-icon" href="/images/logo.png" />
+
+    <!-- SEO Primary -->
+    <title>Belgium Breathwork – Hypnotic Breathwork à Waterloo, Belgique</title>
+    <meta name="description" content="Séances d'Hypnotic Breathwork en Belgique avec Daphnée, certifiée IPHM. Libère tes émotions, retrouve l'équilibre. Séance de groupe dès 50 € à Waterloo. Réserve en ligne." />
+    <link rel="canonical" href="https://site-belgium-breathwork.vercel.app/" />
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://site-belgium-breathwork.vercel.app/" />
+    <meta property="og:title" content="Belgium Breathwork – Libère tes émotions par la respiration" />
+    <meta property="og:description" content="Séances d'Hypnotic Breathwork dès 50 € à Waterloo. Certifiée IPHM. Réserve en ligne — place confirmée instantanément." />
+    <meta property="og:image" content="https://site-belgium-breathwork.vercel.app/images/seance-01.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:image:alt" content="Séance d'Hypnotic Breathwork avec Daphnée à Waterloo" />
+    <meta property="og:locale" content="fr_BE" />
+    <meta property="og:site_name" content="Belgium Breathwork" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Belgium Breathwork – Hypnotic Breathwork à Waterloo" />
+    <meta name="twitter:description" content="Séances d'Hypnotic Breathwork dès 50 € à Waterloo. Certifiée IPHM. Réserve en ligne." />
+    <meta name="twitter:image" content="https://site-belgium-breathwork.vercel.app/images/seance-01.jpg" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#FAFAF7" />
+
+    <!-- Preload LCP image -->
+    <link rel="preload" as="image" href="/images/seance-01.jpg" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://site-belgium-breathwork.vercel.app/#business",
+          "name": "Belgium Breathwork",
+          "description": "Séances d'Hypnotic Breathwork en Belgique avec Daphnée, certifiée IPHM. Libération émotionnelle par la respiration consciente, hypnose et visualisation.",
+          "url": "https://site-belgium-breathwork.vercel.app",
+          "telephone": "+32494204093",
+          "email": "Belgiumbreathwork@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Waterloo",
+            "addressRegion": "Brabant Wallon",
+            "addressCountry": "BE"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "50.7175",
+            "longitude": "4.3979"
+          },
+          "priceRange": "€€",
+          "currenciesAccepted": "EUR",
+          "paymentAccepted": "Paiement en ligne sécurisé",
+          "image": "https://site-belgium-breathwork.vercel.app/images/seance-01.jpg",
+          "logo": "https://site-belgium-breathwork.vercel.app/images/logo.png",
+          "sameAs": [
+            "https://instagram.com/belgium.breathwork",
+            "https://www.facebook.com/profile.php?id=61572202136875",
+            "https://calendly.com/belgiumbreathwork"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Séances de Breathwork",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "Séance de groupe – Hypnotic Breathwork",
+                "price": "50",
+                "priceCurrency": "EUR",
+                "description": "Séance collective d'Hypnotic Breathwork. Respiration consciente, hypnose et visualisation guidée.",
+                "availability": "https://schema.org/InStock"
+              },
+              {
+                "@type": "Offer",
+                "name": "Séance individuelle – Accompagnement personnalisé",
+                "price": "150",
+                "priceCurrency": "EUR",
+                "description": "Séance individuelle sur mesure de 60 à 90 minutes.",
+                "availability": "https://schema.org/InStock"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Person",
+          "name": "Daphnée",
+          "jobTitle": "Praticienne Hypnotic Breathwork",
+          "worksFor": { "@id": "https://site-belgium-breathwork.vercel.app/#business" },
+          "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Certification",
+            "recognizedBy": {
+              "@type": "Organization",
+              "name": "IPHM – International Practitioners of Holistic Medicine"
+            }
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Est-ce que je peux faire du breathwork si je suis très cartésien(ne) ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolument. Les personnes les plus cartésiennes vivent souvent les expériences les plus puissantes. Le breathwork fonctionne via la physiologie, pas via la croyance."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Est-ce que le breathwork est dangereux ? Y a-t-il des contre-indications ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le breathwork est une pratique sûre pour la grande majorité des personnes. Contre-indications médicales : épilepsie, problèmes cardiaques sévères, grossesse, certains troubles psychiatriques. Daphnée s'assure que la pratique est adaptée à votre situation avant chaque séance."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Comment se passe une séance de breathwork concrètement ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Une séance dure généralement 60 à 90 minutes. Elle commence par un échange pour définir l'intention du jour, suivi de la pratique : respiration guidée en cycles, induction hypnotique et visualisation. Vous restez allongé(e), les yeux fermés, avec de la musique. Après la séance, un temps d'intégration est prévu."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Combien de séances faut-il pour ressentir des effets ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "De nombreuses personnes ressentent un effet dès la première séance — calme, légèreté, parfois une libération émotionnelle intense. Pour des changements durables en profondeur, un suivi régulier est recommandé."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Où se trouvent les séances de breathwork ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Les séances se déroulent à Waterloo (Belgique), dans un espace calme et intimiste. Parking disponible à proximité et accès en transport en commun. L'adresse exacte est communiquée lors de la confirmation de réservation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Comment réserver et payer une séance de breathwork ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La réservation se fait directement en ligne via Calendly — rapide et simple. Le paiement sécurisé s'effectue au moment de la réservation (50 € pour les séances de groupe), ce qui garantit votre place immédiatement."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 
     <!-- Meta Pixel -->
     <script>
@@ -50,8 +206,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
-    <title>Belgium Breathwork | Respiration Consciente en Belgique</title>
   </head>
   <body>
     <!-- Meta Pixel noscript fallback -->
