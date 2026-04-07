@@ -12,7 +12,7 @@ const etudes = [
     points: [
       '20 à 28,5 % des actifs belges risquent le burn-out (1 sur 5)',
       '13,4 % des travailleurs en "zone rouge" de détresse extrême',
-      'Coût national : >2 milliards €/an pour l'assurance indemnités',
+      "Coût national : >2 milliards €/an pour l'assurance indemnités",
       '600+ centres de breathwork répertoriés en Europe en 2026',
     ],
     file: '/Burn-out%2C%20Stress%20et%20Bio-hacking%20en%20Belgique.pdf',
@@ -26,10 +26,10 @@ const etudes = [
     statLabel: 'retour sur investissement de chaque euro investi en santé mentale',
     color: 'navy',
     points: [
-      '1 jour d'absence coûte 1 190 € à l'employeur (coûts directs + indirects)',
-      '1 cas de burn-out = 23 677 € de perte pour l'entreprise',
-      'Absentéisme réduit jusqu'à 81 % avec un programme adapté',
-      'Chèques-Entreprises en Wallonie : jusqu'à 90 % de subvention possible',
+      "1 jour d'absence coûte 1 190 € à l'employeur (coûts directs + indirects)",
+      "1 cas de burn-out = 23 677 € de perte pour l'entreprise",
+      "Absentéisme réduit jusqu'à 81 % avec un programme adapté",
+      "Chèques-Entreprises en Wallonie : jusqu'à 90 % de subvention possible",
     ],
     file: '/Bien-%C3%AAtre%20au%20travail%20_%20Tendances%20et%20ROI.pdf',
     fileName: 'Bien-etre-travail-ROI.pdf',
@@ -43,7 +43,7 @@ const etudes = [
     color: 'sand',
     points: [
       'Étude 404 participants (Univ. Queensland) : énergie, clarté mentale +++ vs méditation',
-      'Respiration abdominale 8 semaines : réduction scores d'anxiété (p<0,001)',
+      "Respiration abdominale 8 semaines : réduction scores d'anxiété (p<0,001)",
       'Stimulation du nerf vague → baisse du cortisol et des cytokines inflammatoires',
       'Breathwork holotropique : activation des mêmes réseaux neuronaux que la psilocybine',
     ],
