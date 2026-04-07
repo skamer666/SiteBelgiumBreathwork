@@ -58,7 +58,7 @@ export default function Navbar({ calendlyUrl }) {
         <button onClick={handleCalendly}
                 className="hidden md:flex btn-primary text-sm px-5 py-3"
                 aria-label="Réserver une séance">
-          Réserver — 0€ aujourd'hui
+          Réserver — 50 €
         </button>
 
         {/* Mobile burger */}
@@ -95,7 +95,7 @@ export default function Navbar({ calendlyUrl }) {
               ))}
               <button onClick={handleCalendly}
                       className="btn-primary mt-3 w-full text-base">
-                Bloquer mon créneau — 0€ aujourd'hui
+                Réserver ma place — 50 €
               </button>
             </nav>
           </motion.div>
