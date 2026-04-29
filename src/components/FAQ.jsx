@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: 'Comment réserver et payer ?',
-    a: 'La réservation se fait directement en ligne — rapide et simple. Le paiement est sécurisé et s\'effectue au moment de la réservation, ce qui te garantit ta place immédiatement. Pour les séances entreprise, contacte Daphnée par email ou téléphone.',
+    a: 'La réservation est entièrement gratuite — tu t\'inscris en ligne et ta place est confirmée immédiatement, sans aucun prépaiement. Le paiement de 60 € s\'effectue directement sur place le jour de la séance. Pour les séances entreprise, contacte Daphnée par email ou téléphone.',
   },
   {
     q: 'Le breathwork est-il scientifiquement prouvé ?',

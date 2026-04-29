@@ -75,23 +75,23 @@ export default function Hero({ calendlyUrl }) {
           <motion.p variants={fadeUp}
                     className="text-navy-500/70 font-montserrat font-semibold text-lg mb-8">
             Séance de groupe —{' '}
-            <span className="text-navy-700 bg-sage-100 px-3 py-1 rounded-full">50 €</span>
-            <span className="text-navy-400 font-normal text-base ml-2">· Paiement sécurisé en ligne</span>
+            <span className="text-navy-700 bg-sage-100 px-3 py-1 rounded-full">60 €</span>
+            <span className="text-navy-400 font-normal text-base ml-2">· Paiement sur place</span>
           </motion.p>
 
           <motion.div variants={fadeUp}
                       className="flex flex-col items-center lg:items-start gap-3 mb-8 w-full">
             <button onClick={handleCalendly}
                     className="btn-primary text-lg w-full sm:w-auto"
-                    aria-label="Réserver ma place — paiement sécurisé en ligne">
+                    aria-label="Réserver ma place — réservation gratuite">
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                       d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              Réserver ma place — 50 €
+              Réserver ma place — gratuit
             </button>
             <p className="text-navy-400/70 text-sm italic">
-              Paiement simple et sécurisé en ligne · Ta place est confirmée instantanément
+              Réservation gratuite · Paiement sur place de 60 €
             </p>
             <a href="#about"
                className="btn-outline-light text-base w-full sm:w-auto mt-1"
@@ -103,8 +103,8 @@ export default function Hero({ calendlyUrl }) {
           <motion.div variants={fadeUp}
                       className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 text-navy-400/70 text-sm">
             {[
-              { icon: '✓', text: 'Place garantie dès la réservation' },
-              { icon: '✓', text: 'Paiement 100% sécurisé' },
+              { icon: '✓', text: 'Réservation 100% gratuite' },
+              { icon: '✓', text: 'Paiement sur place · 60 €' },
               { icon: '✓', text: 'Belgique – Waterloo' },
             ].map(({ icon, text }) => (
               <span key={text} className="flex items-center gap-1.5">

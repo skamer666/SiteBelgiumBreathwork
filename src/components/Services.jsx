@@ -6,17 +6,17 @@ const services = [
     tag:     'Offre phare',
     title:   'Séance de groupe',
     sub:     'Hypnotic Breathwork',
-    price:   '50',
+    price:   '60',
     unit:    '€',
     desc:    'Une expérience collective portée par l\'énergie du groupe. Favorise le lâcher-prise, la libération et la connexion humaine profonde.',
-    payment: 'Réservation et paiement en ligne simple et sécurisé. Ta place est confirmée instantanément — aucune surprise le jour J.',
+    payment: 'Réservation gratuite en ligne — paiement de 60 € sur place le jour J. Aucune surprise, aucun prépaiement.',
     features: [
       'Formats réguliers ou événements',
       'Énergie collective amplifiante',
       'Idéal pour découvrir la pratique',
-      'Réservation et paiement en ligne sécurisé',
+      'Réservation gratuite · Paiement sur place',
     ],
-    cta:     'Réserver ma place — 50 €',
+    cta:     'Réserver ma place — gratuit',
     ctaCalendly: true,
     highlight: true,
     badge:   '✦ Le plus accessible',
@@ -149,7 +149,7 @@ export default function Services({ calendlyUrl }) {
                       <span className={`text-xl font-medium
                         ${s.highlight ? 'text-white/70' : 'text-navy-400'}`}>{s.unit}</span>
                       <span className={`text-xs ml-1 ${s.highlight ? 'text-white/45' : 'text-navy-300'}`}>
-                        · en ligne
+                        · sur place
                       </span>
                     </div>
                   ) : (
@@ -174,10 +174,10 @@ export default function Services({ calendlyUrl }) {
                       ta 4ème séance est offerte."
                     </p>
                     <div className="flex items-center justify-between">
-                      <span className="text-white/55 text-xs">4 séances = 3 × 50€</span>
+                      <span className="text-white/55 text-xs">4 séances = 3 × 60€</span>
                       <span className="bg-white/15 text-white font-montserrat font-bold
                                        text-xs px-2.5 py-1 rounded-full">
-                        → 37,50€ / séance
+                        → 45€ / séance
                       </span>
                     </div>
                   </div>
