@@ -12,14 +12,14 @@
     <title>Belgium Breathwork – Hypnotic Breathwork à Bruxelles &amp; Waterloo</title>
     <meta name="description" content="Séances d'Hypnotic Breathwork avec Daphnée, certifiée IPHM. Libère tes émotions par la respiration consciente. Séance de groupe 60 € — paiement sur place, réservation gratuite. À Waterloo, à 20 min de Bruxelles." />
     <meta name="keywords" content="breathwork Bruxelles, hypnotic breathwork Bruxelles, séance breathwork Belgique, respiration consciente Bruxelles, bien-être Bruxelles, gestion stress Bruxelles, breathwork Waterloo, libération émotionnelle Bruxelles" />
-    <link rel="canonical" href="https://site-belgium-breathwork.vercel.app/" />
+    <link rel="canonical" href="https://belgiumbreathwork.be/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://site-belgium-breathwork.vercel.app/" />
+    <meta property="og:url" content="https://belgiumbreathwork.be/" />
     <meta property="og:title" content="Belgium Breathwork – Hypnotic Breathwork à Bruxelles &amp; Waterloo" />
     <meta property="og:description" content="Séances d'Hypnotic Breathwork 60 € sur place à Waterloo, à 20 min de Bruxelles. Certifiée IPHM. Réservation gratuite en ligne." />
-    <meta property="og:image" content="https://site-belgium-breathwork.vercel.app/images/seance-01.jpg" />
+    <meta property="og:image" content="https://belgiumbreathwork.be/images/seance-01.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="800" />
     <meta property="og:image:alt" content="Séance d'Hypnotic Breathwork avec Daphnée à Waterloo" />
@@ -30,7 +30,13 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Belgium Breathwork – Hypnotic Breathwork à Bruxelles &amp; Waterloo" />
     <meta name="twitter:description" content="Séances d'Hypnotic Breathwork 60 € sur place, à 20 min de Bruxelles. Certifiée IPHM. Réservation gratuite." />
-    <meta name="twitter:image" content="https://site-belgium-breathwork.vercel.app/images/seance-01.jpg" />
+    <meta name="twitter:image" content="https://belgiumbreathwork.be/images/seance-01.jpg" />
+
+    <!-- Geo -->
+    <meta name="geo.region" content="BE-WBR" />
+    <meta name="geo.placename" content="Waterloo, Belgique" />
+    <meta name="geo.position" content="50.71754;4.39791" />
+    <meta name="ICBM" content="50.71754, 4.39791" />
 
     <!-- Robots -->
     <meta name="robots" content="index, follow" />
@@ -45,11 +51,11 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "LocalBusiness",
-          "@id": "https://site-belgium-breathwork.vercel.app/#business",
+          "@type": "WellnessCenter",
+          "@id": "https://belgiumbreathwork.be/#business",
           "name": "Belgium Breathwork",
           "description": "Séances d'Hypnotic Breathwork à Waterloo, à 20 minutes de Bruxelles. Avec Daphnée, certifiée IPHM. Libération émotionnelle par la respiration consciente, hypnose et visualisation.",
-          "url": "https://site-belgium-breathwork.vercel.app",
+          "url": "https://belgiumbreathwork.be",
           "telephone": "+32494204093",
           "email": "Belgiumbreathwork@gmail.com",
           "address": {
@@ -72,18 +78,25 @@
           ],
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": "50.7175",
-            "longitude": "4.3979"
+            "latitude": 50.7175,
+            "longitude": 4.3979
           },
           "priceRange": "€€",
           "currenciesAccepted": "EUR",
           "paymentAccepted": "Espèces, virement – paiement sur place",
-          "image": "https://site-belgium-breathwork.vercel.app/images/seance-01.jpg",
-          "logo": "https://site-belgium-breathwork.vercel.app/images/logo.png",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://belgiumbreathwork.be/images/seance-01.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://belgiumbreathwork.be/images/logo.png"
+          },
           "sameAs": [
-            "https://instagram.com/belgium.breathwork",
-            "https://www.facebook.com/profile.php?id=61572202136875",
-            "https://calendly.com/belgiumbreathwork"
+            "https://www.instagram.com/belgium.breathwork",
+            "https://www.facebook.com/profile.php?id=61572202136875"
           ],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
@@ -95,65 +108,109 @@
                 "price": "60",
                 "priceCurrency": "EUR",
                 "description": "Séance collective d'Hypnotic Breathwork à Waterloo, à 20 min de Bruxelles. Respiration consciente, hypnose et visualisation guidée. Réservation gratuite, paiement sur place.",
-                "availability": "https://schema.org/InStock"
+                "availability": "https://schema.org/InStock",
+                "url": "https://belgiumbreathwork.be/#services",
+                "seller": { "@id": "https://belgiumbreathwork.be/#business" }
               },
               {
                 "@type": "Offer",
                 "name": "Séance individuelle – Accompagnement personnalisé",
                 "price": "150",
                 "priceCurrency": "EUR",
-                "description": "Séance individuelle sur mesure de 60 à 90 minutes.",
-                "availability": "https://schema.org/InStock"
+                "description": "Séance individuelle sur mesure de 60 à 90 minutes. Respiration, hypnose et visualisation adaptées à vos besoins.",
+                "availability": "https://schema.org/InStock",
+                "url": "https://belgiumbreathwork.be/#services",
+                "seller": { "@id": "https://belgiumbreathwork.be/#business" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Séance corporate – Breathwork pour équipes",
+                "description": "Ateliers de respiration consciente sur mesure pour entreprises. Gestion du stress, cohésion d'équipe, bien-être au travail.",
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock",
+                "url": "https://belgiumbreathwork.be/#services",
+                "seller": { "@id": "https://belgiumbreathwork.be/#business" }
               }
             ]
           }
         },
         {
           "@type": "Person",
+          "@id": "https://belgiumbreathwork.be/#daphnee",
           "name": "Daphnée",
           "jobTitle": "Praticienne Hypnotic Breathwork",
-          "worksFor": { "@id": "https://site-belgium-breathwork.vercel.app/#business" },
+          "description": "Fondatrice de Belgium Breathwork, certifiée IPHM en Hypnotic Breathwork. Accompagne la libération émotionnelle par la respiration consciente, l'hypnose et la visualisation à Waterloo.",
+          "url": "https://belgiumbreathwork.be/#about",
+          "image": "https://belgiumbreathwork.be/images/daphnee.png",
+          "worksFor": { "@id": "https://belgiumbreathwork.be/#business" },
           "hasCredential": {
             "@type": "EducationalOccupationalCredential",
             "credentialCategory": "Certification",
             "recognizedBy": {
               "@type": "Organization",
-              "name": "IPHM – International Practitioners of Holistic Medicine"
+              "name": "IPHM – International Practitioners of Holistic Medicine",
+              "url": "https://www.iphm.co.uk"
             }
-          }
+          },
+          "sameAs": ["https://www.instagram.com/belgium.breathwork"]
         },
         {
           "@type": "Article",
+          "@id": "https://belgiumbreathwork.be/#article-burnout",
           "headline": "Burn-out, Stress et Bio-hacking en Belgique",
           "description": "Analyse des données INAMI, UCM et SPF Emploi 2024-2026 : +136% de burn-out chez les moins de 30 ans, 20-28,5% des actifs belges à risque, coût national >2 milliards €/an.",
-          "author": { "@id": "https://site-belgium-breathwork.vercel.app/#business" },
-          "publisher": { "@id": "https://site-belgium-breathwork.vercel.app/#business" },
-          "url": "https://site-belgium-breathwork.vercel.app/Burn-out%2C%20Stress%20et%20Bio-hacking%20en%20Belgique.pdf",
+          "author": { "@id": "https://belgiumbreathwork.be/#daphnee" },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Belgium Breathwork",
+            "logo": { "@type": "ImageObject", "url": "https://belgiumbreathwork.be/images/logo.png" }
+          },
+          "mainEntityOfPage": "https://belgiumbreathwork.be/",
+          "url": "https://belgiumbreathwork.be/Burn-out%2C%20Stress%20et%20Bio-hacking%20en%20Belgique.pdf",
+          "image": { "@type": "ImageObject", "url": "https://belgiumbreathwork.be/images/seance-01.jpg", "width": 1200, "height": 800 },
           "datePublished": "2026-01-01",
+          "dateModified": "2026-04-29",
           "inLanguage": "fr"
         },
         {
           "@type": "Article",
+          "@id": "https://belgiumbreathwork.be/#article-roi",
           "headline": "Bien-être au Travail : Tendances et ROI",
           "description": "Données Deloitte, SD Worx, INAMI, Securex 2026 : ROI 6:1 en santé mentale, 23 677 € par cas de burn-out, -81% d'absentéisme avec programme adapté, subventions Wallonie jusqu'à 90%.",
-          "author": { "@id": "https://site-belgium-breathwork.vercel.app/#business" },
-          "publisher": { "@id": "https://site-belgium-breathwork.vercel.app/#business" },
-          "url": "https://site-belgium-breathwork.vercel.app/Bien-%C3%AAtre%20au%20travail%20_%20Tendances%20et%20ROI.pdf",
+          "author": { "@id": "https://belgiumbreathwork.be/#daphnee" },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Belgium Breathwork",
+            "logo": { "@type": "ImageObject", "url": "https://belgiumbreathwork.be/images/logo.png" }
+          },
+          "mainEntityOfPage": "https://belgiumbreathwork.be/",
+          "url": "https://belgiumbreathwork.be/Bien-%C3%AAtre%20au%20travail%20_%20Tendances%20et%20ROI.pdf",
+          "image": { "@type": "ImageObject", "url": "https://belgiumbreathwork.be/images/seance-01.jpg", "width": 1200, "height": 800 },
           "datePublished": "2026-01-01",
+          "dateModified": "2026-04-29",
           "inLanguage": "fr"
         },
         {
           "@type": "Article",
+          "@id": "https://belgiumbreathwork.be/#article-science",
           "headline": "Breathwork, Système Nerveux, Anxiété et Sommeil",
           "description": "Synthèse scientifique Stanford, Université du Queensland, Brighton Medical School 2023-2026 : 5 min de soupir cyclique surpassent la méditation, étude 404 participants, stimulation nerf vague, réduction cortisol.",
-          "author": { "@id": "https://site-belgium-breathwork.vercel.app/#business" },
-          "publisher": { "@id": "https://site-belgium-breathwork.vercel.app/#business" },
-          "url": "https://site-belgium-breathwork.vercel.app/Breathwork%2C%20Syst%C3%A8me%20Nerveux%2C%20Anxi%C3%A9t%C3%A9%2C%20Sommeil.pdf",
+          "author": { "@id": "https://belgiumbreathwork.be/#daphnee" },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Belgium Breathwork",
+            "logo": { "@type": "ImageObject", "url": "https://belgiumbreathwork.be/images/logo.png" }
+          },
+          "mainEntityOfPage": "https://belgiumbreathwork.be/",
+          "url": "https://belgiumbreathwork.be/Breathwork%2C%20Syst%C3%A8me%20Nerveux%2C%20Anxi%C3%A9t%C3%A9%2C%20Sommeil.pdf",
+          "image": { "@type": "ImageObject", "url": "https://belgiumbreathwork.be/images/seance-01.jpg", "width": 1200, "height": 800 },
           "datePublished": "2026-01-01",
+          "dateModified": "2026-04-29",
           "inLanguage": "fr"
         },
         {
           "@type": "FAQPage",
+          "@id": "https://belgiumbreathwork.be/#faq",
           "mainEntity": [
             {
               "@type": "Question",
@@ -257,8 +314,9 @@
       });
     </script>
 
-    <!-- Calendly -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+    <!-- Calendly (non-blocking) -->
+    <link rel="preload" as="style" href="https://assets.calendly.com/assets/external/widget.css" onload="this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" /></noscript>
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
     <!-- Fonts -->

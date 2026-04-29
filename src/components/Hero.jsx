@@ -130,6 +130,9 @@ export default function Hero({ calendlyUrl }) {
               alt="Séance d'Hypnotic Breathwork avec Daphnée à Waterloo"
               className="relative w-full h-64 md:h-80 lg:h-[480px] object-cover rounded-3xl shadow-lift"
               loading="eager"
+              fetchpriority="high"
+              width={800}
+              height={480}
             />
             <div className="absolute -bottom-4 -left-4 glass rounded-2xl px-4 py-3 shadow-card">
               <p className="text-sage-700 font-montserrat font-bold text-sm">✦ Certifiée IPHM</p>
