@@ -158,7 +158,7 @@ export default function ProchainSeances({ calendlyUrl }) {
                     </p>
                     <p className="text-navy-700 font-montserrat font-bold text-xl capitalize">{date}</p>
                     <p className="text-navy-400 text-sm mt-0.5">
-                      {heure} · 2h · Avenue Floréal 20, Waterloo
+                      {heure} · 2h · Waterloo <span className="text-navy-300">(20 min de Bruxelles)</span>
                     </p>
                   </div>
 

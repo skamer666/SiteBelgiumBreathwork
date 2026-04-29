@@ -105,7 +105,7 @@ export default function Hero({ calendlyUrl }) {
             {[
               { icon: '✓', text: 'Réservation 100% gratuite' },
               { icon: '✓', text: 'Paiement sur place · 60 €' },
-              { icon: '✓', text: 'Belgique – Waterloo' },
+              { icon: '✓', text: 'Waterloo · à 20 min de Bruxelles' },
             ].map(({ icon, text }) => (
               <span key={text} className="flex items-center gap-1.5">
                 <span className="text-sage-600 font-bold" aria-hidden="true">{icon}</span>

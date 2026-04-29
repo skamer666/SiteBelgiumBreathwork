@@ -20,8 +20,8 @@ const faqs = [
     a: 'De nombreuses personnes ressentent un effet dès la première séance — un état de calme, de légèreté, parfois une libération émotionnelle intense. Pour des changements durables en profondeur, un suivi régulier est recommandé. Mais une seule séance peut déjà changer quelque chose.',
   },
   {
-    q: 'Où se trouvent les séances ? Y a-t-il du parking ou une gare proche ?',
-    a: 'Les séances se déroulent à Waterloo, dans un espace calme et intimiste, facilement accessible. Parking disponible à proximité et accès en transport en commun. L\'adresse exacte est communiquée lors de la confirmation de réservation.',
+    q: 'Où se trouvent les séances ? Accessible depuis Bruxelles ?',
+    a: 'Les séances se déroulent à Waterloo (Brabant Wallon), à environ 20 minutes de Bruxelles en voiture. Facilement accessible depuis Uccle, Ixelles, Rhode-Saint-Genèse et Braine-l\'Alleud. Parking disponible à proximité et accès en transport en commun. L\'adresse exacte est communiquée lors de la confirmation de réservation.',
   },
   {
     q: 'Comment réserver et payer ?',
