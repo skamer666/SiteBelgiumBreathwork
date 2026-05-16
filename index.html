@@ -297,17 +297,18 @@
     </script>
     <!-- End Meta Pixel -->
 
-    <!-- Calendly booking conversion tracking -->
+    <!-- Calendly booking conversion tracking (pixel côté navigateur + déduplication CAPI) -->
     <script>
       window.addEventListener('message', function(e) {
         try {
           var data = e.data;
-          if (typeof data === 'string') {
-            data = JSON.parse(data);
-          }
+          if (typeof data === 'string') data = JSON.parse(data);
           if (data && data.event === 'calendly.event_scheduled') {
+            var eventId = (data.payload && data.payload.invitee && data.payload.invitee.uri)
+              ? data.payload.invitee.uri
+              : 'calendly-' + Date.now();
             if (typeof fbq === 'function') {
-              fbq('track', 'Lead');
+              fbq('track', 'Lead', {}, { eventID: eventId });
             }
           }
         } catch(err) {}

@@ -1,10 +1,18 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const navLinks = [
   { label: 'À propos',      href: '#about'       },
   { label: 'Séances',       href: '#services'    },
   { label: 'Témoignages',   href: '#temoignages' },
   { label: 'FAQ',           href: '#faq'         },
+]
+
+const resourceLinks = [
+  { label: 'Blog',                  to: '/blog'    },
+  { label: 'Burnout professionnel', to: '/burnout' },
+  { label: 'Troubles du sommeil',   to: '/sommeil' },
+  { label: 'Anxiété & Stress',      to: '/anxiete' },
 ]
 
 const legalLinks = [
@@ -25,7 +33,7 @@ export default function Footer({ calendlyUrl }) {
   return (
     <footer className="bg-navy-900 text-white/55" role="contentinfo">
       <div className="max-w-6xl mx-auto px-4 md:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 mb-12">
 
           {/* Brand */}
           <div className="md:col-span-2">
@@ -80,6 +88,23 @@ export default function Footer({ calendlyUrl }) {
                   Réserver →
                 </button>
               </li>
+            </ul>
+          </div>
+
+          {/* Ressources */}
+          <div>
+            <h3 className="font-montserrat font-semibold text-white/80 text-sm mb-4 tracking-wide uppercase">
+              Ressources
+            </h3>
+            <ul className="space-y-2.5" role="list">
+              {resourceLinks.map((l) => (
+                <li key={l.to}>
+                  <Link to={l.to}
+                        className="text-sm hover:text-sage-400 transition-colors duration-200">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

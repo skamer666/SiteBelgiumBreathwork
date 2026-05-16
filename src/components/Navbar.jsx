@@ -1,16 +1,27 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Link, useLocation } from 'react-router-dom'
 
-const links = [
-  { label: 'À propos',     href: '#about'    },
-  { label: 'Séances',      href: '#services' },
+const anchorLinks = [
+  { label: 'À propos',     href: '#about'       },
+  { label: 'Séances',      href: '#services'    },
   { label: 'Témoignages',  href: '#temoignages' },
-  { label: 'FAQ',          href: '#faq'      },
+  { label: 'FAQ',          href: '#faq'         },
 ]
 
 export default function Navbar({ calendlyUrl }) {
   const [scrolled, setScrolled] = useState(false)
   const [open,     setOpen]     = useState(false)
+  const location = useLocation()
+  const isHome = location.pathname === '/'
+
+  const handleAnchorClick = (e, href) => {
+    if (isHome) {
+      e.preventDefault()
+      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
+    }
+    setOpen(false)
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -40,18 +51,23 @@ export default function Navbar({ calendlyUrl }) {
     >
       <div className="container-max flex items-center justify-between px-4 md:px-8">
         {/* Logo */}
-        <a href="#" className="flex items-center" aria-label="Belgium Breathwork – Accueil">
+        <Link to="/" className="flex items-center" aria-label="Belgium Breathwork – Accueil">
           <img src="/images/logo.png" alt="Belgium Breathwork" className="h-10 w-auto object-contain" />
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8" aria-label="Navigation principale">
-          {links.map((l) => (
-            <a key={l.href} href={l.href}
+          {anchorLinks.map((l) => (
+            <a key={l.href} href={isHome ? l.href : `/${l.href}`}
+               onClick={(e) => handleAnchorClick(e, l.href)}
                className="text-navy-500/80 hover:text-sage-700 font-medium text-sm transition-colors duration-200">
               {l.label}
             </a>
           ))}
+          <Link to="/blog"
+                className="text-navy-500/80 hover:text-sage-700 font-medium text-sm transition-colors duration-200">
+            Blog
+          </Link>
         </nav>
 
         {/* Desktop CTA */}
@@ -86,13 +102,19 @@ export default function Navbar({ calendlyUrl }) {
             className="md:hidden overflow-hidden bg-white/98 backdrop-blur-xl border-t border-sage-100"
           >
             <nav className="flex flex-col px-4 py-4 gap-1" aria-label="Menu mobile">
-              {links.map((l) => (
-                <a key={l.href} href={l.href} onClick={() => setOpen(false)}
+              {anchorLinks.map((l) => (
+                <a key={l.href} href={isHome ? l.href : `/${l.href}`}
+                   onClick={(e) => handleAnchorClick(e, l.href)}
                    className="text-navy-600 hover:text-sage-700 hover:bg-sage-50
                               py-3 px-4 rounded-lg font-medium transition-all duration-200">
                   {l.label}
                 </a>
               ))}
+              <Link to="/blog" onClick={() => setOpen(false)}
+                    className="text-navy-600 hover:text-sage-700 hover:bg-sage-50
+                               py-3 px-4 rounded-lg font-medium transition-all duration-200">
+                Blog
+              </Link>
               <button onClick={handleCalendly}
                       className="btn-primary mt-3 w-full text-base">
                 Réserver ma place — gratuit

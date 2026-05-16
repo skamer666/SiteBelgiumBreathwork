@@ -1,62 +1,31 @@
-import { useScroll, useSpring, motion } from 'framer-motion'
-import Navbar           from './components/Navbar'
-import Hero             from './components/Hero'
-import ProchainSeances  from './components/ProchainSeances'
-import PainPoints       from './components/PainPoints'
-import HowItWorks  from './components/HowItWorks'
-import About       from './components/About'
-import Services    from './components/Services'
-import GaleriePhotos from './components/GaleriePhotos'
-import Testimonials from './components/Testimonials'
-import Etudes      from './components/Etudes'
-import FAQ         from './components/FAQ'
-import CTABanner   from './components/CTABanner'
-import Footer      from './components/Footer'
-import MobileCTA       from './components/MobileCTA'
-import WhatsAppButton  from './components/WhatsAppButton'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import ScrollToTop from './utils/ScrollToTop'
+import Home from './pages/Home'
+import Burnout from './pages/Burnout'
+import Sommeil from './pages/Sommeil'
+import Anxiete from './pages/Anxiete'
+import Blog from './pages/Blog'
+import BreathworkBurnout from './pages/articles/BreathworkBurnout'
+import RespirationSommeil from './pages/articles/RespirationSommeil'
+import AlternativePsychologue from './pages/articles/AlternativePsychologue'
 
-const CALENDLY_URL = 'https://calendly.com/belgiumbreathwork'
-
-export { CALENDLY_URL }
+export { CALENDLY_URL } from './constants'
 
 export default function App() {
-  const { scrollYProgress } = useScroll()
-  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 })
-
   return (
-    <div className="font-inter bg-cream text-navy-500 overflow-x-hidden">
-      {/* Scroll progress bar */}
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-[3px] origin-left z-[100]"
-        style={{
-          scaleX,
-          background: 'linear-gradient(90deg, #4A7C59, #7C9A7E, #2D4A7A)',
-        }}
-      />
-
-      <Navbar calendlyUrl={CALENDLY_URL} />
-
-      <main>
-        <Hero              calendlyUrl={CALENDLY_URL} />
-        <ProchainSeances   calendlyUrl={CALENDLY_URL} />
-        <PainPoints />
-        <HowItWorks />
-        <About      calendlyUrl={CALENDLY_URL} />
-        <Services   calendlyUrl={CALENDLY_URL} />
-        <GaleriePhotos />
-        <Testimonials />
-        <Etudes />
-        <FAQ />
-        <CTABanner  calendlyUrl={CALENDLY_URL} />
-      </main>
-
-      <Footer calendlyUrl={CALENDLY_URL} />
-
-      {/* Sticky bottom CTA – mobile only */}
-      <MobileCTA calendlyUrl={CALENDLY_URL} />
-
-      {/* WhatsApp floating button */}
-      <WhatsAppButton />
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/"                                                    element={<Home />} />
+        <Route path="/burnout"                                             element={<Burnout />} />
+        <Route path="/sommeil"                                             element={<Sommeil />} />
+        <Route path="/anxiete"                                             element={<Anxiete />} />
+        <Route path="/blog"                                                element={<Blog />} />
+        <Route path="/blog/comment-le-breathwork-aide-contre-le-burnout"  element={<BreathworkBurnout />} />
+        <Route path="/blog/exercices-de-respiration-pour-mieux-dormir"    element={<RespirationSommeil />} />
+        <Route path="/blog/breathwork-ou-psychologue-bruxelles"           element={<AlternativePsychologue />} />
+        <Route path="*"                                                    element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
