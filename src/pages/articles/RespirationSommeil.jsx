@@ -5,15 +5,27 @@ import { CALENDLY_URL } from '../../constants'
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
-  headline: '5 Exercices de Respiration pour Mieux Dormir ce Soir',
-  description: 'L\'insomnie touche un tiers des adultes en Belgique. Ces 5 techniques de respiration, issues du breathwork et de la neuroscience, vous aident à vous endormir naturellement.',
-  datePublished: '2026-05-08',
-  dateModified: '2026-05-08',
-  author: { '@type': 'Person', name: 'Daphnée', url: 'https://belgiumbreathwork.be/#about' },
-  publisher: { '@type': 'Organization', name: 'Belgium Breathwork', url: 'https://belgiumbreathwork.be' },
-  image: 'https://belgiumbreathwork.be/images/seance-02.jpg',
-  url: 'https://belgiumbreathwork.be/blog/exercices-de-respiration-pour-mieux-dormir',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      headline: '5 Exercices de Respiration pour Mieux Dormir ce Soir',
+      description: 'L\'insomnie touche un tiers des adultes en Belgique. Ces 5 techniques de respiration, issues du breathwork et de la neuroscience, vous aident à vous endormir naturellement.',
+      datePublished: '2026-05-08',
+      dateModified: '2026-05-08',
+      author: { '@type': 'Person', name: 'Daphnée', url: 'https://belgiumbreathwork.be/#about' },
+      publisher: { '@type': 'Organization', name: 'Belgium Breathwork', url: 'https://belgiumbreathwork.be' },
+      image: 'https://belgiumbreathwork.be/images/seance-02.jpg',
+      url: 'https://belgiumbreathwork.be/blog/exercices-de-respiration-pour-mieux-dormir',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://belgiumbreathwork.be/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://belgiumbreathwork.be/blog' },
+        { '@type': 'ListItem', position: 3, name: '5 Exercices de Respiration pour Mieux Dormir', item: 'https://belgiumbreathwork.be/blog/exercices-de-respiration-pour-mieux-dormir' },
+      ],
+    },
+  ],
 }
 
 const techniques = [
@@ -87,7 +99,7 @@ export default function RespirationSommeil() {
               ce soir. Sans médicaments, sans applications, en quelques minutes.
             </p>
             <div className="mt-6 flex items-center gap-4">
-              <img src="/images/daphnee.png" alt="Daphnée" className="w-10 h-10 rounded-full object-cover" />
+              <img src="/images/daphnee.png" alt="Daphnée" className="w-10 h-10 rounded-full object-cover" width={40} height={40} />
               <div>
                 <p className="font-semibold text-navy-700 text-sm">Daphnée</p>
                 <p className="text-navy-400 text-xs">Praticienne Hypnotic Breathwork · Certifiée IPHM · 8 mai 2026</p>
@@ -98,7 +110,8 @@ export default function RespirationSommeil() {
 
         <div className="container-max max-w-3xl px-4 md:px-8 -mt-8">
           <img src="/images/seance-02.jpg" alt="Exercices de respiration pour mieux dormir"
-               className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-lift" />
+               className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-lift"
+               width={800} height={533} />
         </div>
 
         {/* Content */}

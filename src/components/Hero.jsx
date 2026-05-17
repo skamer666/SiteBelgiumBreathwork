@@ -62,10 +62,15 @@ export default function Hero({ calendlyUrl }) {
             </span>
           </motion.div>
 
-          <motion.h1 variants={fadeUp} className="heading-xl text-navy-700 mb-4">
+          <motion.h1 variants={fadeUp} className="heading-xl text-navy-700 mb-2">
             Libère tes émotions.{' '}
             <span className="block text-gradient">Retrouve ton souffle.</span>
           </motion.h1>
+
+          <motion.p variants={fadeUp}
+                    className="font-montserrat text-sage-600/90 font-semibold text-sm mb-4 tracking-wider uppercase">
+            Breathwork Bruxelles &amp; Waterloo
+          </motion.p>
 
           <motion.p variants={fadeUp} className="body-lg text-navy-500/80 mb-4 max-w-xl">
             Une séance d'<strong className="text-sage-700 font-semibold">Hypnotic Breathwork</strong> combine

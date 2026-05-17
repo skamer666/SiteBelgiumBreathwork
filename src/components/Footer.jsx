@@ -45,6 +45,10 @@ export default function Footer({ calendlyUrl }) {
               Séances d'Hypnotic Breathwork en Belgique pour libérer tes émotions et retrouver l'équilibre.
               Certifiée IPHM.
             </p>
+            <address className="not-italic text-xs text-white/35 leading-relaxed mb-5">
+              Avenue Floréal 20, 1410 Waterloo<br />
+              Brabant Wallon · À 20 min de Bruxelles
+            </address>
             {/* Social */}
             <div className="flex gap-3">
               <a href="https://instagram.com/belgium.breathwork"

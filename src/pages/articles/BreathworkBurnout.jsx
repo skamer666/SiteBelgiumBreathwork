@@ -5,16 +5,28 @@ import { CALENDLY_URL } from '../../constants'
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
-  headline: 'Comment le Breathwork aide contre le Burnout — Guide complet',
-  description: 'Le burnout n\'est pas une simple fatigue. Découvrez comment le breathwork agit sur le système nerveux pour sortir de l\'épuisement professionnel et retrouver l\'énergie.',
-  datePublished: '2026-05-01',
-  dateModified: '2026-05-01',
-  author: { '@type': 'Person', name: 'Daphnée', url: 'https://belgiumbreathwork.be/#about' },
-  publisher: { '@type': 'Organization', name: 'Belgium Breathwork', url: 'https://belgiumbreathwork.be' },
-  image: 'https://belgiumbreathwork.be/images/seance-01.jpg',
-  url: 'https://belgiumbreathwork.be/blog/comment-le-breathwork-aide-contre-le-burnout',
-  mainEntityOfPage: 'https://belgiumbreathwork.be/blog/comment-le-breathwork-aide-contre-le-burnout',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      headline: 'Comment le Breathwork aide contre le Burnout — Guide complet',
+      description: 'Le burnout n\'est pas une simple fatigue. Découvrez comment le breathwork agit sur le système nerveux pour sortir de l\'épuisement professionnel et retrouver l\'énergie.',
+      datePublished: '2026-05-01',
+      dateModified: '2026-05-01',
+      author: { '@type': 'Person', name: 'Daphnée', url: 'https://belgiumbreathwork.be/#about' },
+      publisher: { '@type': 'Organization', name: 'Belgium Breathwork', url: 'https://belgiumbreathwork.be' },
+      image: 'https://belgiumbreathwork.be/images/seance-01.jpg',
+      url: 'https://belgiumbreathwork.be/blog/comment-le-breathwork-aide-contre-le-burnout',
+      mainEntityOfPage: 'https://belgiumbreathwork.be/blog/comment-le-breathwork-aide-contre-le-burnout',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://belgiumbreathwork.be/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://belgiumbreathwork.be/blog' },
+        { '@type': 'ListItem', position: 3, name: 'Comment le Breathwork aide contre le Burnout', item: 'https://belgiumbreathwork.be/blog/comment-le-breathwork-aide-contre-le-burnout' },
+      ],
+    },
+  ],
 }
 
 export default function BreathworkBurnout() {
@@ -57,7 +69,7 @@ export default function BreathworkBurnout() {
             </p>
             <div className="mt-6 flex items-center gap-4">
               <img src="/images/daphnee.png" alt="Daphnée, praticienne Hypnotic Breathwork"
-                   className="w-10 h-10 rounded-full object-cover" />
+                   className="w-10 h-10 rounded-full object-cover" width={40} height={40} />
               <div>
                 <p className="font-semibold text-navy-700 text-sm">Daphnée</p>
                 <p className="text-navy-400 text-xs">Praticienne Hypnotic Breathwork · Certifiée IPHM · 1 mai 2026</p>
@@ -69,7 +81,8 @@ export default function BreathworkBurnout() {
         {/* Image */}
         <div className="container-max max-w-3xl px-4 md:px-8 -mt-8">
           <img src="/images/seance-01.jpg" alt="Séance de breathwork contre le burnout à Waterloo"
-               className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-lift" />
+               className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-lift"
+               width={800} height={533} />
         </div>
 
         {/* Content */}
