@@ -64,6 +64,10 @@ export default function Navbar({ calendlyUrl }) {
               {l.label}
             </a>
           ))}
+          <Link to="/breathwork-bruxelles"
+                className="text-navy-500/80 hover:text-sage-700 font-medium text-sm transition-colors duration-200">
+            Bruxelles
+          </Link>
           <Link to="/blog"
                 className="text-navy-500/80 hover:text-sage-700 font-medium text-sm transition-colors duration-200">
             Blog
@@ -110,6 +114,11 @@ export default function Navbar({ calendlyUrl }) {
                   {l.label}
                 </a>
               ))}
+              <Link to="/breathwork-bruxelles" onClick={() => setOpen(false)}
+                    className="text-navy-600 hover:text-sage-700 hover:bg-sage-50
+                               py-3 px-4 rounded-lg font-medium transition-all duration-200">
+                Breathwork à Bruxelles
+              </Link>
               <Link to="/blog" onClick={() => setOpen(false)}
                     className="text-navy-600 hover:text-sage-700 hover:bg-sage-50
                                py-3 px-4 rounded-lg font-medium transition-all duration-200">

@@ -194,14 +194,14 @@ export default function Burnout() {
               <p className="text-navy-400 text-sm leading-relaxed">Mécanismes physiologiques, science et conseils pratiques.</p>
               <span className="inline-block mt-4 text-sage-600 font-semibold text-sm">Lire l'article →</span>
             </Link>
-            <Link to="/blog"
+            <Link to="/blog/burnout-symptomes"
                   className="block bg-navy-50 border border-navy-100 rounded-2xl p-6 hover:border-navy-200 hover:shadow-soft transition-all duration-300 group">
-              <span className="section-tag text-navy-500 border-navy-200 bg-white mb-3 text-xs">Blog</span>
+              <span className="section-tag text-navy-500 border-navy-200 bg-white mb-3 text-xs">Article · 8 min</span>
               <h3 className="font-montserrat font-semibold text-navy-700 text-lg mb-2 group-hover:text-sage-700 transition-colors">
-                Tous nos articles sur le breathwork
+                Burn-out : les symptômes à reconnaître
               </h3>
-              <p className="text-navy-400 text-sm leading-relaxed">Sommeil, anxiété, burnout — des ressources pratiques.</p>
-              <span className="inline-block mt-4 text-sage-600 font-semibold text-sm">Voir le blog →</span>
+              <p className="text-navy-400 text-sm leading-relaxed">Les 12 signes à ne pas ignorer, et les premières étapes pour en sortir.</p>
+              <span className="inline-block mt-4 text-sage-600 font-semibold text-sm">Lire l'article →</span>
             </Link>
           </div>
         </div>

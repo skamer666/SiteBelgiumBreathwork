@@ -1,5 +1,32 @@
 export const articles = [
   {
+    slug: 'burnout-symptomes',
+    title: 'Burn-out : les Symptômes à Reconnaître (et que faire)',
+    description: "Épuisement qui ne passe pas, irritabilité, troubles du sommeil : les 12 signes du burn-out à ne pas ignorer, et les premières étapes concrètes pour en sortir.",
+    date: '2026-09-04',
+    readTime: '8 min',
+    category: 'Burnout & Stress',
+    image: '/images/seance-01.jpg',
+  },
+  {
+    slug: 'coherence-cardiaque',
+    title: 'Cohérence Cardiaque : le Guide Complet (méthode 365)',
+    description: "Qu'est-ce que la cohérence cardiaque, comment la pratiquer avec la méthode 365, et pourquoi le breathwork en est une version amplifiée.",
+    date: '2026-09-04',
+    readTime: '7 min',
+    category: 'Respiration & Science',
+    image: '/images/seance-02.jpg',
+  },
+  {
+    slug: 'lacher-prise',
+    title: 'Lâcher Prise : Pourquoi Votre Respiration en Est la Clé',
+    description: "Lâcher prise n'est pas une décision mentale, c'est un état physiologique. Pourquoi la volonté seule échoue, et comment la respiration ouvre la porte.",
+    date: '2026-09-04',
+    readTime: '6 min',
+    category: 'Bien-être & Émotions',
+    image: '/images/seance-03.png',
+  },
+  {
     slug: 'comment-le-breathwork-aide-contre-le-burnout',
     title: 'Comment le Breathwork aide contre le Burnout — Guide complet',
     description: 'Le burnout n\'est pas une simple fatigue. Découvrez comment le breathwork agit sur le système nerveux pour sortir de l\'épuisement professionnel et retrouver l\'énergie.',

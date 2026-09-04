@@ -192,6 +192,9 @@ export default function Anxiete() {
               Breathwork vs psychologue →
             </Link>
           </div>
+          <Link to="/blog/lacher-prise" className="inline-block mt-6 text-white/60 hover:text-white text-sm transition-colors">
+            À lire aussi : Lâcher prise, pourquoi la respiration en est la clé →
+          </Link>
         </div>
       </section>
     </Layout>

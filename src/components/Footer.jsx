@@ -9,10 +9,12 @@ const navLinks = [
 ]
 
 const resourceLinks = [
-  { label: 'Blog',                  to: '/blog'    },
-  { label: 'Burnout professionnel', to: '/burnout' },
-  { label: 'Troubles du sommeil',   to: '/sommeil' },
-  { label: 'Anxiété & Stress',      to: '/anxiete' },
+  { label: 'Breathwork à Bruxelles', to: '/breathwork-bruxelles' },
+  { label: 'Breathwork à Waterloo',  to: '/breathwork-waterloo'  },
+  { label: 'Burnout professionnel',  to: '/burnout' },
+  { label: 'Troubles du sommeil',    to: '/sommeil' },
+  { label: 'Anxiété & Stress',       to: '/anxiete' },
+  { label: 'Blog',                   to: '/blog'    },
 ]
 
 const legalLinks = [

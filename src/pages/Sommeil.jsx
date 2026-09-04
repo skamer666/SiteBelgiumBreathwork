@@ -180,6 +180,9 @@ export default function Sommeil() {
               Lire l'article complet
             </Link>
           </div>
+          <Link to="/blog/coherence-cardiaque" className="inline-block mt-6 text-white/60 hover:text-white text-sm transition-colors">
+            À lire aussi : Cohérence cardiaque, le guide complet (méthode 365) →
+          </Link>
         </div>
       </section>
     </Layout>
